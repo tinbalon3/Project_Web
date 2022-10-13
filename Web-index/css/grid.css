@@ -15,6 +15,12 @@
     margin-left: -4px;
     margin-right: -4px;
 }
+.row__nowrap
+{
+    display: flex;
+    margin-left: -4px;
+    margin-right: -4px;
+}
 
 .row.no-gutters {
     margin-left: 0;
