@@ -214,9 +214,6 @@ input[type=text], input[type=password] {
     margin-left: 113px;
     width: 425px;
 }
-form {
-    border: 3px solid #f1f1f1;
-  }
 label
 {
     font-size: 1.6rem;

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="/Project/css/Cartcss.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/Project/Icon/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/all.css">
+    </head>
+    
+    <body>
+        <div class="box">
+
+            <div class="header">
+                <div class="header js-header">
+                    <div class="grid wide">
+                        <div class="header__navbar">
+                            <div class="header__navbar-item-img">
+                                        <img src="/Project/img/logo.png" alt="" class="header-item-img">
+                            </div>
+                            <ul class="header__navbar-list">
+                                <li class="header__navbar-list-item">
+                                    <a href="" class="header__navbar-item-link">Home</a>
+                                </li>
+                                <li class="header__navbar-list-item">
+                                    <a href="" class="header__navbar-item-link">About Us</a>
+                                </li>
+                                <li class="header__navbar-list-item">
+                                    <a href="" class="header__navbar-item-link">Services</a>
+                                </li>
+                                <li class="header__navbar-list-item">
+                                    <a href="" class="header__navbar-item-link"> Gallery</a>
+                                </li>
+                                <li class="header__navbar-list-item">
+                                    <a href="" class="header__navbar-item-link">Blogs</a>
+                                </li>
+                                <li class="header__navbar-list-item">
+                                    <a href="" class="header__navbar-item-link">Contact Us</a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="slider-page">
+                <div class="display-img">
+                    <img src="/Project/img/about-us-slider.jpg" alt="A cup of coffee" class="img-fluid">
+                </div>
+                <div class="display-title">
+                    <h1 class="entry-title">Cart</h1>
+                </div>
+            </div>
+    
+            <div class="cart-review container">
+                <div class="content js-content_1">
+                    <table class="cart-info">
+                        <thead>
+                            <tr class="product-info">
+                                <th class="product-remove">&nbsp;</th>
+                                <th class="product-thumbnail">&nbsp;</th>
+                                <th class="product-name">Product</th>
+                                <th class="product-price">Price</th>
+                                <th class="product-quantity">Quanity</th>
+                                <th class="product-quantity">Add more</th>
+                                <th class="product-total">Total</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody>
+                            
+                            </tr> -->
+                            <tr class="list-items js-item">
+                                <td class="product-remove">
+                                    <a href="#" class="remove js-remove" aria-label="Remove this item">X</a>
+                                </td>
+                                <td class="product-thumbnail">
+                                    <a href="#">
+                                        <img src="" alt="" class="thumnail.info js-img">
+                                    </a>
+                                </td>
+                                <td class="product-name">
+                                    <a href="#" id="nameProduct">Ethiopia Coffee</a>
+                                </td>
+                                <td class="product-price">
+                                    <span id="priceProduct">$15.00</span>
+                                </td>
+                                <td class="product-quantity">
+                                    <span id="qtyProduct">2</span>
+                                </td>
+                                <td class="product-quantity">
+                                    <div class="body__product-detail-quantity-button">
+                                        <input aria-label="quantity" class="input-qty js-qty" max="100" min="1" name="" type="number" value="1">
+                                        <div class="quantity-cal">
+                                            <input class="plus is-form" type="button" onclick="plus()" value="+">
+                                            <input class="minus is-form" type="button" onclick="minus()" value="-">
+
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="product-total">
+                                    <span id="totalProduct">$30.00</span>
+                                </td>
+                            </tr>
+                            <tr class="coupon-checking">
+                                <td colspan="10" class="action">
+                                    <div class="coupon">
+                                        <input type="text" class="coupon-code" placeholder="Coupon code">
+                                        <input type="submit" class="button" name="apply coupon" value="Apply coupon">
+                                        <input type="submit" class="update" name="apply coupon" onclick="update()" value="Update cart">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+        
+                    <div class="cart-total">
+                        <h2>Cart Total</h2>
+                        <table class="cart-total-review">
+                            <tbody>
+                                <tr class="cart_total">
+                                    <th class="subtotal">Subtotal</th>
+                                    <td>
+                                        <span class="js-total">$53.00</span>
+                                    </td>
+                                </tr>
+                                <tr class="cart_total">
+                                    <th class="shipping">Shipping</th>
+                                    <td>Calculate shipping</td>
+                                </tr>
+                                <tr class="cart_total">
+                                    <th class="order-total">Total</th>
+                                    <td>
+                                        <strong><span class="js-total">$53.00</span></strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="proceed-to-checkout">
+                            <a href="/Project/html/checkout.html" class="check-button button-alt">Proceed to checkout</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_2 js-content_2">
+                    <h1 class="cart_empty">Your cart is currently empty.</h1>
+                    <div class="button_return">
+                        <a href="/Product-List-main/index.html">return to shop</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer">
+                <div id="footer">
+                    <div class="footer__container">
+                        <div class="footer__border">
+                                <div class="footer__logo-text cols-3">
+                                    <a href="" class="footer__logo-text-link">
+                                        <img src="/Project/img/logo.png" alt="Footer logo" class="footer__logo-text-img">
+                                    </a>
+                                    <p>I use Lorem ipsum text all day long and spend hours formatting it, so I set this site up to make my day a little easier.</p>
+                                </div>
+                                
+                                <div class="footer__menu">
+                                    <div class="footer__toggle-menu cols-3">
+                                        <h2 class="footer__toggle-menu-head">Quick links</h2>
+                                        <ul class="list-unstyled list-hover">
+                                            <li class="item-unstyled list-hover"><a href=""><i class="fa-solid fa-caret-right"></i>Home</a></li>
+                                            <li class="item-unstyled list-hover"><a href=""><i class="fa-solid fa-caret-right"></i>About us</a></li>
+                                            <li class="item-unstyled list-hover"><a href=""><i class="fa-solid fa-caret-right"></i>Services</a></li>
+                                            <li class="item-unstyled list-hover"><a href=""><i class="fa-solid fa-caret-right"></i>Gallery</a></li>
+                                            <li class="item-unstyled list-hover"><a href=""><i class="fa-solid fa-caret-right"></i>Blog</a></li>
+                                            <li class="item-unstyled list-hover"><a href=""><i class="fa-solid fa-caret-right"></i>Contact us</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer__toggle-menu cols-3">
+                                        <h2 class="footer__toggle-menu-head">Contact us</h2>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <div class="footer__content-section">
+                                                    <div class="footer__content-section-icon">
+                                                        <i class="fa-solid fa-location-dot"></i>
+                                                    </div>
+                                                    <div class="footer__content-text">
+                                                        <h3>Location :</h3>
+                                                        <p>A20 Green Hill Road, <br> Fayetteville,California</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="footer__content-section">
+                                                    <div class="footer__content-section-icon">
+                                                        <i class="fa-solid fa-phone"></i>
+                                                    </div>
+                                                    <div class="footer__content-text">
+                                                        <h3>Phone :</h3>
+                                                        <a href="tel:+120922326350">+1 209-223-2635</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="footer__content-section">
+                                                    <div class="footer__content-section-icon">
+                                                        <i class="fa-solid fa-envelope"></i>
+                                                    </div>
+                                                    <div class="footer__content-text">
+                                                        <h3>Email :</h3>
+                                                        <a href="mailto:info@ritualcoffee.com">info@ritualcoffee.com</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer__toggle-menu cols-3 footer__toggle-instagram">
+                                        <h2 class="footer__toggle-menu-head">Instagram</h2>
+                                            <ul class="list-unstyled grid-container">
+        
+                                                <li class="footer__instagram-img-container">
+                                                    <img src="/Project/img/tb-footer-instagram-img-01.jpg" alt="Footer Instagram" class="footer__instagram-img">
+                                                    <div class="img-modal">
+                                                        <a href="#">
+                                                            <i class="fa-brands fa-instagram social-icon"></i>
+                                                        </a>
+        
+                                                    </div>
+                                                </li>
+                
+                                                <li class="footer__instagram-img-container">
+                                                    <img src="/Project/img/tb-footer-instagram-img-02.jpg" alt="Footer Instagram" class="footer__instagram-img">
+                                                    <div class="img-modal">
+                                                        <a href="#">
+                                                            <i class="fa-brands fa-instagram social-icon"></i>
+                                                        </a>
+        
+                                                    </div>
+                                                </li>
+                                                <li class="footer__instagram-img-container">
+                                                    <img src="/Project/img/tb-footer-instagram-img-03.jpg" alt="Footer Instagram" class="footer__instagram-img">
+                                                    <div class="img-modal">
+                                                        <a href="#">
+                                                            <i class="fa-brands fa-instagram social-icon"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="footer__instagram-img-container">
+                                                    <img src="/Project/img/tb-footer-instagram-img-04.jpg" alt="Footer Instagram" class="footer__instagram-img">
+                                                    <div class="img-modal">
+                                                        <a href="#">
+                                                            <i class="fa-brands fa-instagram social-icon"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="footer__instagram-img-container">
+                                                    <img src="/Project/img/tb-footer-instagram-img-05.jpg" alt="Footer Instagram" class="footer__instagram-img">
+                                                    <div class="img-modal">
+                                                        <a href="#">
+                                                            <i class="fa-brands fa-instagram social-icon"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="footer__instagram-img-container">
+                                                    <img src="/Project/img/tb-footer-instagram-img-06.jpg" alt="Footer Instagram" class="footer__instagram-img">
+                                                    <div class="img-modal">
+                                                        <a href="#">
+                                                            <i class="fa-brands fa-instagram social-icon"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="footer__sub-container">
+                        <div class="footer_copyright">
+                            <p>Copyright © 2022 <a href="#URL" class="footer__copyright-hover">Ritual coffee</a>. All Rights Reserved.</p>
+                        </div>
+                        <div class="footer__social-icon">
+                            <ul class="footer__social-icon-list">
+                                <li class="footer__social-icon-item list-hover">
+                                    <a href="">
+                                        <i class="fa-brands fa-facebook-f social-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="footer__social-icon-item list-hover">
+                                    <a href="">
+                                        <i class="fa-brands fa-twitter social-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="footer__social-icon-item list-hover">
+                                    <a href="">
+                                        <i class="fa-brands fa-skype social-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="footer__social-icon-item list-hover">
+                                    <a href="">
+                                        <i class="fa-brands fa-instagram social-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal_empty">
+                <div class="loader"></div>
+            </div>
+        </div>
+    </body>
+    <script>
+        /* when scroll, header will change */
+        var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+            document.querySelector('.header').style.top = "0";
+            document.querySelector('.header').classList.add('thaydoiheader');
+            } else {
+            document.querySelector('.header').style.top = "-96px";
+            }
+            if(currentScrollPos == 0)
+            {
+                document.querySelector('.header').classList.remove('thaydoiheader');
+            }
+            prevScrollpos = currentScrollPos;
+            }
+    </script>
+    <script>
+        
+            var button_remove=document.querySelectorAll('.js-remove');
+            var item=document.querySelectorAll('.js-item');
+            var total_item=document.querySelectorAll('.js-total');
+            var contentbox=document.querySelector('.js-content_1');
+            var contentbox_2=document.querySelector('.js-content_2');
+            var modal=document.querySelector('.modal_empty');
+            var count=0;
+            for(let i=0;i<button_remove.length;i++)
+            {
+                button_remove[i].addEventListener('click',function()
+                {
+                    count++;
+                    console.log(count);
+                    item[i].style.display='none';
+                    if(count==button_remove.length)
+                    {
+                        modal.style.display='block';
+                        setTimeout(function()
+                        {
+                            contentbox.classList.add('close');
+                            contentbox_2.classList.add('open');
+                            modal.style.display='none';
+                        },1500);
+                    }
+                })
+            
+            }
+
+
+
+
+            
+            var indexImg=[
+            "/Product-List-main/img/productList-img-1.png",
+            "/Product-List-main/img/productList-img-2.png",
+            "/Product-List-main/img/productList-img-3.png",
+            "/Product-List-main/img/backgroundCopy_1.png",
+            "/Product-List-main/img/productList-img-5.png",
+            "/Product-List-main/img/productList-img-6.png",
+            "/Product-List-main/img/productList-img-7.png",
+            "/Product-List-main/img/product-img-8.png",
+            "/Product-List-main/img/productList-img-9.png",
+            "/Product-List-main/img/product-img-10.png",
+            "/Product-List-main/img/product-img-11.png",
+            "/Product-List-main/img/productList-img-MetalCup.png",
+            "/Product-List-main/img/ProductList-img-DespensingTray.png",
+            "/Product-List-main/img/ProductList-img-MeasuringCup.png",
+            "/Product-List-main/img/Productlist-img-CeramicCup.png",
+            "/Product-List-main/img/productList-img-CoffeeCapsule.png"
+            ]
+           var Item=JSON.parse(localStorage.getItem("Item"));
+            document.getElementById('nameProduct').innerHTML=Item.name;
+            document.getElementById('priceProduct').innerHTML=Item.price;
+            document.getElementById('qtyProduct').innerHTML=Item.value;
+            document.querySelector('.js-qty').value=Item.value;
+            document.querySelector('.js-img').src=indexImg[Item.index];
+            var total_product=parseInt(document.getElementById('priceProduct').innerHTML)*parseInt( document.getElementById('qtyProduct').innerHTML);
+            document.getElementById('totalProduct').innerHTML='$' + total_product + ".00";
+            for(let i=0;i<total_item.length;i++)
+            {
+                total_item[i].innerHTML='$' + total_product + ".00";
+            }
+            
+            function plus()
+            {
+                var value=document.querySelector('.js-qty').value;
+                var count=parseInt(value)+1;
+                document.querySelector('.js-qty').value=count;
+            }
+            function minus()
+            {
+                var value=document.querySelector('.js-qty').value;
+                var count=parseInt(value)-1;
+                if(count<1)
+                    count=1;
+                document.querySelector('.js-qty').value=count;
+            }
+            function update()
+            {
+                var value=document.querySelector('.js-qty').value;
+                var total_product=parseInt(document.getElementById('priceProduct').innerHTML)*parseInt(value);
+                document.getElementById('qtyProduct').innerHTML=value;
+                document.getElementById('totalProduct').innerHTML='$' + total_product + ".00";
+                for(let i=0;i<total_item.length;i++)
+                {
+                     total_item[i].innerHTML='$' + total_product + ".00";
+                }
+            }
+    </script>
+</html>

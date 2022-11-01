@@ -24,25 +24,26 @@
                         <ul class="header__navbar-list">
                             <li class="header__navbar-list-item">
                                 <a href="/Web-index/index.html" class="header__navbar-item-link">Home</a>
-                            </li>
+                                </li>
                             <li class="header__navbar-list-item">
                                 <a href="/About-us-main/index.html" class="header__navbar-item-link">About Us</a>
-                            </li>
+                                </li>
                             <li class="header__navbar-list-item">
-                                <a href="#" class="header__navbar-item-link">Services</a>
-                            </li>
+                                <a href="#section_id" class="header__navbar-item-link">Services</a>
+                                </li>
                             <li class="header__navbar-list-item">
                                 <a href="/Ritual-Coffee_-Gallery-main/index.html" class="header__navbar-item-link"> Gallery</a>
-                            </li>
+                               </li>
                             <li class="header__navbar-list-item">
-                                <a href="./blog_detail1.html" class="header__navbar-item-link">Blogs</a>
-                            </li>
+                                <a href="/Project/html/blog_detail1.html" class="header__navbar-item-link">Blogs</a>
+                                </li>
                             <li class="header__navbar-list-item">
-                                <a href="./Contact_Us.html" class="header__navbar-item-link">Contact Us</a>
-                            </li>
-                            <li class="header__navbar-list-item">
-                                <a href="/Web-index/login.html" class="header__navbar-item-link">Login</a>
-                            </li>
+                                <a href="/Project/html/Contact_Us.html" class="header__navbar-item-link">Contact Us</a>
+                                </li>
+                                <li class="header__navbar-list-item">
+                                    <a href="/Product-List-main/index_no_login.html" class="header__navbar-item-link">Product</a>
+                                    </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -261,34 +262,25 @@
                     </div>
                 </div>
             </div>
-            <div class="cart">
-                <div class="cart_icon">
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-            </div>
         </div>
 
         <script>
             /* when scroll, header will change */
-            document.addEventListener("DOMContentLoaded",function() {
-                    var menu=document.querySelector('.js-header');
-                    var trangthai="duoi200";
-                    window.addEventListener("scroll",function(){
-                    var x = pageYOffset;
-                    if(x > 100){
-                        if(trangthai == "duoi200")
-                        {
-                            trangthai="tren200";
-                            menu.classList.add('thaydoiheader');
-                        }
-                    }
-                    else{
-                        if(trangthai=="tren200"){
-                        menu.classList.remove('thaydoiheader');
-                        trangthai="duoi200";}
-                    }
-                    })
-                })       
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+            document.querySelector('.header').style.top = "0";
+            document.querySelector('.header').classList.add('thaydoiheader');
+            } else {
+            document.querySelector('.header').style.top = "-96px";
+            }
+            if(currentScrollPos == 0)
+            {
+                document.querySelector('.header').classList.remove('thaydoiheader');
+            }
+            prevScrollpos = currentScrollPos;
+            } 
         </script>
     </body>
 </html>

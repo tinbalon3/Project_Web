@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>About us</title>
+        <title>Gallery</title>
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/base.css">
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;700&family=Inconsolata:wght@200;300;400;500;700&display=swap" rel="stylesheet">
@@ -20,13 +20,13 @@
                          </div>
                         <ul class="header__navbar-list">
                             <li class="header__navbar-list-item">
-                                <a href="/Web-index/index.html" class="header__navbar-item-link">Home</a>
+                                <a href="/Web-index/index_login_success.html" class="header__navbar-item-link">Home</a>
                                 </li>
                             <li class="header__navbar-list-item">
                                 <a href="/About-us-main/index.html" class="header__navbar-item-link">About Us</a>
                                 </li>
                             <li class="header__navbar-list-item">
-                                <a href="#" class="header__navbar-item-link">Services</a>
+                                <a href="#section_id" class="header__navbar-item-link">Services</a>
                                 </li>
                             <li class="header__navbar-list-item">
                                 <a href="/Ritual-Coffee_-Gallery-main/index.html" class="header__navbar-item-link"> Gallery</a>
@@ -37,9 +37,9 @@
                             <li class="header__navbar-list-item">
                                 <a href="/Project/html/Contact_Us.html" class="header__navbar-item-link">Contact Us</a>
                                 </li>
-                            <li class="header__navbar-list-item">
-                                <a href="/Web-index/login.html" class="header__navbar-item-link">Login</a>
-                                </li>
+                                <li class="header__navbar-list-item">
+                                    <a href="/Product-List-main/index_no_login.html" class="header__navbar-item-link">Product</a>
+                                    </li>
                         </ul>
                     </div>
                 </div>
@@ -284,25 +284,21 @@
         </div>
         <script>
             // when scroll, header will change
-        document.addEventListener("DOMContentLoaded",function() {
-        var menu=document.querySelector('.js-header');
-        var trangthai="duoi200";
-        window.addEventListener("scroll",function(){
-        var x = pageYOffset;
-        if(x > 100){
-            if(trangthai == "duoi200")
-            {
-                trangthai="tren200";
-                menu.classList.add('thaydoiheader');
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+            document.querySelector('.header').style.top = "0";
+            document.querySelector('.header').classList.add('thaydoiheader');
+            } else {
+            document.querySelector('.header').style.top = "-96px";
             }
-        }
-        else{
-            if(trangthai=="tren200"){
-            menu.classList.remove('thaydoiheader');
-            trangthai="duoi200";}
-        }
-    })
-})
+            if(currentScrollPos == 0)
+            {
+                document.querySelector('.header').classList.remove('thaydoiheader');
+            }
+            prevScrollpos = currentScrollPos;
+            }
         </script>
     </body>
 </html>

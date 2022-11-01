@@ -38,25 +38,21 @@ var imgsblog=[
 
 
 // when scroll, header will change
-document.addEventListener("DOMContentLoaded",function() {
-var menu=document.querySelector('.js-header');
-var trangthai="duoi200";
-window.addEventListener("scroll",function(){
-var x = pageYOffset;
-if(x > 100){
-    if(trangthai == "duoi200")
-    {
-        trangthai="tren200";
-        menu.classList.add('thaydoiheader');
-    }
-}
-else{
-    if(trangthai=="tren200"){
-    menu.classList.remove('thaydoiheader');
-    trangthai="duoi200";}
-}
-})
-})
+var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+            document.querySelector('.header').style.top = "0";
+            document.querySelector('.header').classList.add('thaydoiheader');
+            } else {
+            document.querySelector('.header').style.top = "-96px";
+            }
+            if(currentScrollPos == 0)
+            {
+                document.querySelector('.header').classList.remove('thaydoiheader');
+            }
+            prevScrollpos = currentScrollPos;
+            }
 
 
 
@@ -260,6 +256,25 @@ modalclose.addEventListener('click',function()
     modal.classList.remove('open')
 })
 // end
+
+//Change img header
+var images = document.querySelectorAll('.slider_img'), x = 0;
+setTimeout("changeImage()",3000);
+function changeImage() {
+    images[x].style.display='none';
+    x++;        
+    if(x < images.length)
+    {
+        images[x].style.display='block';
+    }
+    if(x >= images.length) {
+        x = 0;
+        images[x].style.display='block';
+    } 
+
+    setTimeout("changeImage()", 3000);
+}
+
 
 
 

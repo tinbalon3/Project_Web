@@ -340,6 +340,7 @@ input[type='text']
     margin: 20px 0;
     position: relative;
     align-items: center;
+    justify-content: space-between;
 }
 .table_header-name-list p
 {
@@ -361,7 +362,7 @@ input[type='text']
 .table_header-name-list
 {
     padding: 10px 30px;
-    width: 170px;
+    width: 120px;
 }
 .active_list
 {
@@ -371,9 +372,10 @@ input[type='text']
 {
     display: flex;
 }
+
 .change_button
 {
-    transform: translateX(-13px);
+    margin-bottom: 5px;
 }
 .change_button,
 .delete_button
@@ -381,6 +383,7 @@ input[type='text']
     justify-content: center;
     align-items: center;
     display: flex;
+
 }
 .change_button a:hover,
 .delete_button a:hover
@@ -389,15 +392,21 @@ input[type='text']
     opacity: 0.8;
     color: #000;
 }
+.change_button a
+{
+    background: #0d6efd !important;
+}
+.delete_button a
+{
+    background: red !important;
+}
 .change_button a,
 .delete_button a
 {
     padding: 7px;
-    background: #0d6efd;
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.4rem;
-    transform: translateX(-10px);
     color: #fff;
 }
 .add:hover
@@ -493,11 +502,17 @@ input[type='text']
     width: 15px;
     right: 140px;
 }
+.icon-footer-right:hover
+{
+    opacity: 0.8;
+    cursor: pointer;
+}
 .icon-footer-right
 {
     position: absolute;
     width: 15px;
     right: 10px;
+    height: 15px;
 }
 
 /* Add */
@@ -665,6 +680,10 @@ textarea
     color:  #939191;
     line-height: 2.4rem;
 }
+.add_sl
+{
+    margin-top: 4px;
+}
 .add_day,
 .add_price
 {
@@ -723,7 +742,11 @@ textarea
 {
     background-color: rgba(0, 0, 0, 0.1) !important;
 }
-.button_add span
+.button_add span a
+{
+    color: #fff;
+}
+.button_add span 
 {
     padding: 15px 50px;
     background-color: #4d4f5c;

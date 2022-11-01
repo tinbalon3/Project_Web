@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/grid.css">
-    <link rel="stylesheet" href="./css/base1.css">
+    <link rel="stylesheet" href="./css/base.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
     <link rel="stylesheet" href="/Web-index/font/fontawesome-free-6.2.0-web/css/all.min.css">
@@ -35,7 +35,7 @@
                             <a href="/About-us-main/index.html" class="header__navbar-item-link">About Us</a>
                             </li>
                         <li class="header__navbar-list-item">
-                            <a href="" class="header__navbar-item-link">Services</a>
+                            <a href="#section_id" class="header__navbar-item-link">Services</a>
                             </li>
                         <li class="header__navbar-list-item">
                             <a href="/Ritual-Coffee_-Gallery-main/index.html" class="header__navbar-item-link"> Gallery</a>
@@ -46,7 +46,10 @@
                         <li class="header__navbar-list-item">
                             <a href="/Project/html/Contact_Us.html" class="header__navbar-item-link">Contact Us</a>
                             </li>
-                        <li class="header__navbar-list-item">
+                            <li class="header__navbar-list-item">
+                                <a href="/Product-List-main/index.html" class="header__navbar-item-link">Product</a>
+                                </li>
+                        <li class="header__navbar-list-item hover_user">
                             <div class="avatar">
                                 <div class="icon_avatar">
                                     <i class="fa-solid fa-user-tie"></i>
@@ -56,17 +59,7 @@
                                 </div>
                             </div>
                             <div class="nav_ava">
-                                <ul class="list-user">
-                                    <li class="list_user_item">
-                                        <a class="cart-user">
-                                            <div class="icon_cart">
-                                                <i class="fa-solid fa-cart-shopping"></i>
-                                            </div>
-                                            <div class="item_name">
-                                                <p>Cart</p>
-                                            </div>
-                                        </a>
-                                    </li>
+                                <ul class="list-user"> 
                                     <li class="list_user_item">
                                         <a href="./index.html" class="cart-user">
                                             <div class="icon_out">
@@ -87,7 +80,8 @@
         </div>
        
         <div class="header__slider-img">
-            <img src="./img/header.jpg" alt="" class="slider-img">
+            <img src="./img/header.jpg" alt="" class="slider_img">
+            <img src="./img/header1.jpg" alt="" class="slider_img">
             <div class="slider__content">
                 <h2>Coffee Day</h2>
                 <h3>COME AND TRY OUR BEST COFFEE !</h3>
@@ -115,7 +109,7 @@
                 </div>
             </div>
       
-        <section class="section">
+        <section class="section" id="section_id">
                 <div class="section__content">
                     <div class="row__nowrap">
                         <div class=" l-3 section_test">
@@ -661,13 +655,13 @@
         </div>
         <div class="cart">
             <div class="cart_icon">
-                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                <span>2</span>
+                <a href="/Project/html/Cart(Both).html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <span>1</span>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="./css/login.js"></script>
     <script type="text/javascript" src="./css/javascript.js"></script>
+    <script type="text/javascript" src="./css/login.js"></script>
     <script>
         var credentials = JSON.parse(localStorage.getItem("credentials"));
         document.querySelector('.username_customer').innerHTML=credentials.name;

@@ -1,0 +1,1031 @@
+/*HEADER*/
+.header
+{
+    height: 96px;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    transition: all ease-in-out 0.3s;
+}
+.header__navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 96px;
+    padding-left: 84px;
+}
+.header__navbar-list
+{
+    display: flex;
+    justify-content: end;
+    color: var(--white-color);
+    list-style: none;
+    line-height: 96px;
+    padding-left: 70px;
+    padding-right: 15px;
+}
+.header__navbar-list-item a
+{
+    text-decoration: none;
+    color: var(--white-color);
+    padding: 38px 14px;
+    font-size: 18px;
+
+}
+.header__navbar-list-item
+{
+    position: relative;
+    /* transition: all ease-in 1s; */
+}
+.header__navbar-list-item:nth-child(7):after
+{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 3px;
+    right: 13px;
+    border-radius: 2px;
+    top: 68%;
+    background-color: var(--white-color);
+}
+.header__navbar-list-item:nth-child(7):hover::after
+{
+    animation: fadeIn1 ease-in-out 400ms;
+}
+.header__navbar-list-item:nth-child(1):hover:after,
+.header__navbar-list-item:nth-child(3):hover:after,
+.header__navbar-list-item:nth-child(4):hover:after,
+.header__navbar-list-item:nth-child(5):hover:after,
+.header__navbar-list-item:nth-child(6):hover:after,
+.header__navbar-list-item:nth-child(2):hover:after
+{
+    display: block;
+    
+}
+.header__navbar-list-item:nth-child(1):after
+{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 3px;
+    right: 13px;
+    border-radius: 2px;
+    top: 68%;
+    background-color: var(--white-color);
+    display: none;
+    animation: fadeIn1 ease-in-out 400ms;
+    
+}
+@keyframes fadeIn1{
+    from{
+        transform: scaleX(0);
+    }to{
+        transform: scaleX(1);
+    }
+}
+.header__navbar-list-item:nth-child(3):after
+{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 69px;
+    height: 3px;
+    right: 13px;
+    border-radius: 2px;
+    top: 68%;
+    background-color: var(--white-color);
+    display: none;
+    animation: fadeIn1 ease-in-out 400ms;
+    
+}
+.header__navbar-list-item:nth-child(4):after
+{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 57px;
+    height: 3px;
+    right: 11px;
+    border-radius: 2px;
+    top: 68%;
+    background-color: var(--white-color);
+    display: none;
+    animation: fadeIn1 ease-in-out 400ms;
+    
+}
+.header__navbar-list-item:nth-child(5):after
+{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 44px;
+    height: 3px;
+    right: 14px;
+    border-radius: 2px;
+    top: 68%;
+    background-color: var(--white-color);
+    display: none;
+    animation: fadeIn1 ease-in-out 400ms;
+    
+}
+.header__navbar-list-item:nth-child(6):after
+{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 87px;
+    height: 3px;
+    right: 13px;
+    border-radius: 2px;
+    top: 68%;
+    background-color: var(--white-color);
+    display: none;
+    animation: fadeIn1 ease-in-out 400ms;
+    
+}
+.header__navbar-list-item:nth-child(2):after
+{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 43px;
+    height: 3px;
+    right: 14px;
+    border-radius: 2px;
+    top: 68%;
+    background-color: var(--white-color);
+    display: none;
+    animation: fadeIn1 ease-in-out 400ms;
+    
+}
+.header__navbar-item-img
+{
+    color: #000;
+}
+.header-item-img
+{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    position: relative;
+}
+.thaydoiheader
+{
+    background-color: #000;
+}
+
+
+
+/*BODY: SLIDER*/
+.body__slider{
+    position: relative;
+}
+.body__slider-img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.slider__text-content{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slider__text-heading{
+    font-size: 60px;
+    color: var(--white-color);
+    font-family: 'Marcellus', serif;
+    font-weight: 400;
+    line-height: 38px;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/*BODY: PRODUCT LIST*/
+.body__productList{
+    background-image: url('/Product-List-main/img/site-bg.jpg');
+}
+.body__product-element{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 110px;
+}
+.body__productList-container{
+    width: 1370px;
+    padding-left: 25px;
+    padding-right: 10px;
+}
+
+.body__product-img-content{
+    position: relative;
+}
+.body__product-img{
+    width: 90%;
+}
+.body__product-img--modal{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: none;
+}
+.body__product-img-content:hover .body__product-img--modal {
+    display: block; 
+    cursor: pointer;
+    transition: 0.4s;
+}
+.body__product-img--modal-link{
+    text-decoration: none;
+}
+.body__product-button--modal{
+    background-color: #97552c;
+    height: 55px;
+    width: 175px;
+    position: absolute;
+    top: 45%;
+    left: 20%;
+}
+.body__product-button--modal:hover{
+    background-color: #000;
+    transition: 0.4s;
+}
+.body__product-button-text--modal{
+    color: var(--white-color);
+    font: 400 15px/17px "Cairo", Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    text-align: center;
+    line-height: 55px;
+    margin: 0;
+}
+.body__product-text{
+    text-align: center;
+}
+.body__product-name{
+    color: #97552c;
+    font: 400 25px/27px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 1px;
+    margin: 30px 0 20px 0;
+    text-transform: uppercase;
+}
+.body__product-price{
+    font: 400 18px/20px "Marcellus", Helvetica, sans-serif;
+    letter-spacing: 1px;
+    margin: 0 0 85px 0;
+    text-transform: uppercase;
+}
+
+/*BODY: SIDE BAR*/
+.widget{
+    margin-top: 50px;
+}
+.widget-title{
+    font: 400 25px/27px "Marcellus", Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.widget-tool-bar{
+    border: 2px solid #97552c;
+}
+.widget-price-amount{
+    padding-top: 15px;
+}
+.price-label{
+    padding: 10px 0;
+}
+.price-info{
+    font: 400 19px/21px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.price-filter{
+    padding: 15px 30px;
+    background-color: #be9c79;
+    border: 1px solid #be9c79;
+    width: 111px;
+}
+.price-filter-text{
+    color: var(--white-color);
+    text-transform: uppercase;
+    font: 400 15px/17px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+.product-category-list,
+.product-tag-list,
+.top-rated-product-list
+{
+    list-style-type: none;
+    padding-left: 0;
+}
+.js-view
+{
+    display: none;
+}
+.product-tag-item:hover,
+.product-category-item:hover
+{
+    cursor: pointer;
+    color: #be9c79;
+}
+.product-category-item,
+.product-tag-item
+{
+    font: 400 19px/21px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 5px 0;
+}
+.top-rated-product-item{
+    display: flex;
+    margin-bottom: 14px;
+}
+.top-rated-product-item-info{
+    font: 400 19px/21px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.top-rated-product-item-star-icon{
+    padding: 10px 0;
+    font-size: 18px;
+    color: #97552c;
+}
+.top-rated-product-item-img:hover
+{
+    cursor: pointer;
+}
+.top-rated-product-item-img{
+    width: 110px;
+   object-fit: contain;
+}
+.input-search-box{
+    width: 100%;
+    height: 60px;
+    text-transform: uppercase;
+    font: 400 15px/17px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+    padding-left: 10px;
+}
+.input-search-icon{
+    height: 60px;
+    font-size: 18px;
+    background: #fff;
+}
+.body__product-offer-img{
+    width: 100%;
+}
+
+/*BODY: PAGE NUMBER*/
+.body__page-number-list{
+    list-style-type: none;
+}
+.body__page-number-nav{
+    text-align: center;
+}
+.body__page-number-link{
+    text-decoration: none;
+    color: var(--black-color);
+    font: 400 18px/20px "Marcellus", Helvetica, sans-serif;
+}
+.body__page-number-link:hover{
+    color: #97552c;
+    transition: 0.2s;
+}
+.body__page-number--curent-color{
+    color: #97552c;
+}
+.body__page-number-item{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+/*DETAIL BODY: PRODUCT*/
+.body__product-main-img{
+    width: 95%;
+}
+.body__product-detail-container{
+    padding-top: 70px;
+    margin-bottom: 14px;
+}
+.body__product-detail-zoom-img{
+    width: 100%;
+    margin-right: 5px;
+}
+.body__product-detail{
+    background-image: url('/Product-List-main/img/site-bg.jpg');
+}
+.body__product-detail-name{
+    font: 400 35px/37px "Marcellus", Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+.body__product-detail-price{
+    font: 300 22px/25px "Cairo", Helvetica, sans-serif;
+    color: #777777;
+}
+.body__product-detail-rating{
+    color: #97552c;
+    font-size: 15px;
+}
+.body__product-detail-reviewer{
+    font: 400  15px/17px "Cairo", Helvetica, sans-serif;
+    color: #777777;
+}
+.body__product-detail-description-p{
+    font: 400  15px/17px "Cairo", Helvetica, sans-serif;
+    color: var(--black-color);
+    line-height: 1.4rem;
+    letter-spacing: 0.4px;
+}
+
+/*BODY: DETAIL OF PRODUCT, BUTTON OF QUANTITY*/
+.body__product-detail-quantity{
+    margin-top: 39px;
+    margin-bottom: 15px;
+}
+.body__product-detail-quantity-button{
+    opacity: 1;
+    display: inline-block;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    white-space:nowrap;
+    vertical-align:top;
+}
+.is-form{
+    overflow:hidden;
+    position:relative;
+    background-color:#f9f9f9;
+    height: 2.5rem;
+    width: 2.5rem;
+    padding:0;
+    text-shadow:1px 1px 1px #fff;
+    border:1px solid #ddd;
+}
+.is-form:focus,.input-text:focus {
+    outline:none;
+}
+.is-form.minus {
+    border-radius:4px 0 0 4px;
+}
+.is-form.plus {
+    border-radius:0 4px 4px 0;
+}
+.input-qty {
+    background-color:#fff;
+    height:2.5rem;
+    text-align:center;
+    font-size:1rem;
+    display:inline-block;
+    vertical-align:top;
+    margin:0;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    border-left:0;
+    border-right:0;
+    padding:0;
+}
+.input-qty::-webkit-outer-spin-button,.input-qty::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin:0;
+}
+.js-add:hover
+{
+    cursor: pointer;
+}
+.body__product-detail-add-link{
+    text-decoration: none;
+}
+.body__product-detail-add-button{
+    background-color: #97552c;
+    width: 175px;
+    height: 2.5rem;
+}
+.body__product-detail-add-button:hover{
+    background-color: #000;
+    color: #fff;
+}
+.body__product-detail-add-button-text{
+    color: var(--white-color);
+    font: 400 15px/17px "Cairo", Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    text-align: center;
+    line-height: 2.5rem;
+    margin: 0;
+}
+.body__product-detail-info{
+    margin: 0;
+}
+.body__product-detail-info--Strong{
+    font: 400 15px/17px "Marcellus", Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color:#97552c;
+}
+.body__product-detail--light{
+    font: 400 15px/17px "Marcellus", Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+}
+.body__product-detail-social-list{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+.body__product-detail-social-item-link{
+    color: #000;
+}
+.body__product-detail-social-item-text{
+    font: 400 15px/17px "Marcellus", Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color:#97552c;
+    margin-right: 9px;
+}
+.body__product-detail-social-item{
+    font: 600 17px/19px "Marcellus", Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+    margin-right: 9px;
+}
+.body__product-detail-social-item-link:hover{
+    color:#97552c;
+    transition: 0.5s;
+}
+.body__product-detail-total-information{
+    margin-top: 20px;
+}
+.body__product-detail-total-information-list{
+    list-style-type: none;
+    width: 90%;
+    vertical-align: middle;
+    display: table;
+    text-align: center;
+    clear: both;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+.body__product-detail-total-information-item{
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #97552c;
+}
+
+.body__product-detail-total-information-link{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: #fff;
+    font: 400 15px/17px "Cairo", Helvetica, sans-serif;
+
+}
+.body__product-detail-total-information-box{
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    vertical-align: middle;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    margin-top: -1px;
+}
+.body__product-detail-total-information-heading{
+    display: none;
+}
+.body__product-detail-total-information-p{
+    margin: 22px 27px;
+    font: 400 15px/17px "Cairo", Helvetica, sans-serif;
+    line-height: 1.4rem;
+    letter-spacing: 0.3px;
+}
+.body__product-detail-total-information-text{
+    margin: 22px 27px;
+}
+.body__product-detail-total-information-text--Strong{
+    font: 600 17px/19px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+}
+.body__product-detail-total-information-text--light{
+    font: 400 15px/17px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+
+}
+.body__product-detail-total-information-item:active,
+.body__product-detail-total-information-item:hover
+{
+    background-color: #000;
+    color: #fff;
+    transition: 0.4s;
+}
+.body__product-detail-related-products-heading{
+    font: 400 35px/37px "Marcellus", Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding-left: 50px;
+    margin-top: 155px;
+}
+.body__product-detail-related-products-container{
+    padding: 0 15px;
+}
+.body__product-name:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.body__product-detail-total-information-of-client{
+    margin: 22px 27px;
+}
+.body__product-detail-total-information-of-client-rate{
+    list-style-type: none;
+    display: flex;
+    color: #97552c;
+    padding: 0;
+    margin: 0;
+}
+.body__product-detail-total-information-of-client-private{
+    margin: 0;
+}
+.body__product-detail-total-information-of-client-name{
+    font: 600 19px/21px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+    
+}
+.body__product-detail-total-information-of-client-birthday{
+    font: 400 15px/17px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+    
+}
+.body__product-detail-total-information-of-client-sub{
+    font: 400 15px/17px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+    margin-top: 15px;
+}
+.body__product-detail-total-information-client-do{
+    margin: 22px 27px;
+}
+.body__product-detail-total-information-client-do-text{
+    font: 400 15px/17px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+}
+#respond textarea{
+    display: block;
+    padding: 16px 18px;
+}
+.body__product-detail-total-information-client-do-form{
+    margin: 22px 27px;
+}
+.comment-form{
+    margin: 0;
+}
+#tab-additionalInformation{
+    display: none;
+}
+#tab-reviews{
+    display: none;
+}
+.check-form{
+    margin: 22px 27px;
+}
+.check-form-label{
+    font: 400 15px/17px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+}
+.submit-button{
+    margin: 22px 27px;
+}
+.submit-button-form{
+    background-color: #97552c;
+    color: #fff;
+    border: none;
+    width: 175px;
+    height: 40px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+.submit-button-form:hover{
+    background-color: #000;
+    transition: 0.4s;
+}
+.body__product-detail-total-information-of-client-star-link1,
+.body__product-detail-total-information-of-client-star-link2{
+    text-decoration: none;
+    color: #97552c;
+}
+.star-rating--hide{
+    display: none;
+}
+
+
+/*BODY: PRODUCT OFFER*/
+.body__brand{
+    background-image: url('/img/site-bg.jpg');
+    padding: 75px 0;
+}
+.body__brand-intro{
+    text-align: center;
+}
+.body__brand-heading{
+    font: 400 55px/57px "Marcellus", Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+.body__brand-info-text-p{
+    font: 400 19px/21px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.4rem;
+}
+.body__brand-heading{
+    margin: 0;
+}
+.body__brand-section{
+    padding-bottom: 100px;
+}
+.body__brand-section-wrapper{
+    padding-top: 73px;
+}
+.body__brand-section-wrapper-item {
+    padding: 0 45px 74px 32px;
+    text-align: center;
+}
+.body__brand-section-wrapper-heading{
+    font: 400 25px/27px "Marcellus", Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+    margin: 0;
+    padding-top: 13px;
+    text-transform: uppercase;
+}
+.body__brand-section-wrapper-paragph{
+    font: 400 15px/17px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.4rem;
+    margin-top: 6px;
+}
+.body__brand-section-wrapper-heading:hover{
+    color: #97552c;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.body__brand-section-img{
+    width: 100%;
+}
+.body__brand-section-text-container{
+    background-color: #fff0dd;
+    text-align: center;
+    padding-top: 25%;
+}
+.body__brand-section-text-heading{
+    font: 400 25px/27px "Marcellus", Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+    margin: 0;
+    padding-top: 13px;
+    text-transform: uppercase;
+}
+.body__brand-section-text-sub-heading{
+    font: 400 17px/19px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.4rem;
+   padding-top: 10px;
+}
+.body__brand-section-advertise-img{
+    width: 100%;
+}
+
+.body__brand-section-advertise-img-container:hover .body__brand-section-advertise-img{
+    cursor: pointer;
+}  
+.img-1:hover{
+    filter: grayscale(100%);
+}
+
+
+/*FOOTER*/
+#footer{
+    background-color: #111;
+    height: 520px;
+}
+.footer__container{
+    width: 1370px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.footer__border{
+    border-bottom: 1px solid #232323;
+    padding: 72px 0;
+    display: flex;
+}
+.footer__logo-text{
+    padding-right: 100px;
+    z-index: 1;
+}
+.footer__container .footer__logo-text p{
+    color: var(--white-color);
+    font: 400 15px/26px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.50px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+
+.footer__menu{
+    display: flex;
+}
+.footer__toggle-menu{
+    color: var(--white-color);
+    padding: 0 15px;
+}
+.footer__toggle-menu-head{
+    font: 400 22px/24px "Marcellus", Helvetica, sans-serif;
+    letter-spacing: 0.50px;
+    color: var(--white-color);
+    margin-bottom: 30px;
+    position: relative;
+    text-transform: uppercase;
+}
+.list-unstyled{
+    list-style-type: none;
+    padding: 0;
+   
+}
+.list-unstyled li{
+    margin-bottom: 20px;
+}
+.list-unstyled li a{
+    font: 400 15px/17px "Cairo", Helvetica, sans-serif;
+    color: #fff;
+    letter-spacing: 0.50px;
+    text-decoration: none;
+    display: flex;
+}
+.list-unstyled li i{
+    margin-right: 10px;
+    font-size: 18px;
+}
+.footer__content-section-icon{
+    margin-right: 10px;
+}
+.footer__content-section{
+    display: flex;
+}
+.footer__content-text h3{
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.footer__content-text p{
+    font: 400 15px/25px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.50px;
+    color: #cccccc;
+    margin: 0;
+}
+
+.footer__instagram-img-container{
+    margin-bottom: 0 !important;
+    margin-right: 10px;
+    position: relative;
+}
+.footer__instagram-img{
+    margin: 0 3px 10px;
+}
+
+
+
+.footer__sub-container{
+    width: 1370px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.footer_copyright p{
+    font: 400 15px/17px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.50px;
+    color: #fff;
+    margin: 0;
+}
+.footer_copyright p a{
+    text-decoration: none;
+    font: 600 15px/17px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.50px;
+    color: #fff;
+    margin: 0;
+}
+.footer__social-icon-list{
+    list-style-type: none;
+    display: flex;
+}
+.footer__social-icon-item{
+    padding: 0 10px;
+}
+.social-icon{
+    font-size: 16px;
+    color: var(--white-color);
+}
+.list-hover:hover > a,
+.footer__content-text:hover > a,
+.list-hover:hover > a > i,
+.footer__copyright-hover:hover
+{
+    color: #97552c;
+    transition: all ease-in-out 0.4s;
+}
+.img-modal{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    right: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; 
+}
+.img-modal a i{
+    position: absolute;
+    top: 35%;
+    font-size: 26px;
+    right: 30%;
+}
+.footer__instagram-img-container:hover .img-modal{
+    transition: all ease-in-out 0.4s;
+    display: flex;
+    cursor: pointer;
+}
+.modal-login
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    animation: fade linear 0.5s;
+}
+.required
+{
+    position: fixed;
+    top: 37%;
+    right: 37%;
+    padding: 15px;
+    
+}
+@keyframes fade {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+.header-login
+{
+    padding: 15px;
+    font-size: 18px;
+    color: #fff;
+    background: #be9c79;
+    cursor: default;
+}
+.btn-option
+{
+    display: flex;
+    justify-content: space-around;
+}
+.btn-no,
+.btn-yes
+{
+    width: 90px;
+    height: 40px;
+    background: #f7f4f1;
+    border: none;
+    border-radius: 3px;
+    color: #000;
+}
+.btn-no:hover,
+.btn-yes:hover
+{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.required a
+{
+    text-decoration: none;
+    color: #000;
+}
