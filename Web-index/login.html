@@ -40,7 +40,7 @@
                                 <img src="./img/googleicon.png" class="img_gg" alt="">
                             </span>
                             <p class="google-text">
-                                Đăng nhập bằng Google
+                            Login with Google
                             </p>
                         </div>
                         <div class="login_twitter">
@@ -52,16 +52,24 @@
                     <div class="login_line">
                         <span>Or</span>
                     </div>
-                  
+                    <form action="" method="POST" class="form" id="form-1">
                     <div class="login_user">
-                            <label for="uname"><b>Username</b></label>
-                            <input id="uname" class="input_user js-username-login" type="text" placeholder="Enter Username"  name="uname" required autofocus>
-                            <label for="psw"><b>Password</b>
-                            <a href="#">Forgot password?</a></label>
-                            <input class="input_user margin-bot js-pass-login" type="password"  placeholder="Enter Password"  id="psw" name="psw" required>
-                            <button class="button js-button" onclick="check()" type="submit"><span>Sign In</span></button>
+                        <div class="form-group">
+                            <label for="uname"><b>Email</b></label>
+                            <input id="email" class="input_user js-username-login" type="text" placeholder="Enter your email"  name="uname"  autofocus>
+                            <span class="form-message"></span>
                         </div>
-                  
+                        <div class="form-group">
+                            <label for="psw" class="label">
+                                <b>Password</b>
+                                <a href="#">Forgot password?</a>
+                            </label>
+                            <input class="input_user js-pass-login" type="password"  placeholder="Enter Password"  id="password" name="psw" >
+                            <span class="form-message"></span>
+                        </div>
+                            <button class="button js-button" type="submit"><span>Sign In</span></button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -73,5 +81,17 @@
         <p>We couldn't find an account matching the username and password you entered. Please check your username and password and try again.</p>
     </div>
     <script type="text/javascript" src="./css/login.js"></script>
+    <script>
+        Validator({
+            form: '#form-1',
+            errorSelector:'.form-message',
+            rules: [
+                Validator.isRequired('#email','Please enter this field'),
+                Validator.isEmail('#email','This field must be email'),
+                Validator.isRequired('#password','Please enter this field'),
+                Validator.isMinlength('#password',6,'Please enter at least 6 characters')
+            ]
+        })
+    </script>
 </body>
 </html>

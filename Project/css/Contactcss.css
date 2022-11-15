@@ -11,7 +11,10 @@ body {
     max-width: 100%;
     max-height: 100%;
 }
-
+.content
+{
+    position: relative;
+}
 :root
 {
     --white-color:#fff;
@@ -472,7 +475,7 @@ body {
 /*FOOTER*/
 #footer{
     background-color: #111;
-    height: 520px;
+    height: 456px;
 }
 .footer__container{
     width: 1370px;
@@ -661,3 +664,82 @@ body {
     height: 428px;
     transform: rotate(180deg);
 } */
+
+.cart
+{
+    position: fixed;
+    right: 37px;
+    bottom: 37px;
+    z-index: 999;
+}
+.cart:hover
+{
+    opacity: 0.8;
+}
+.cart_icon i
+{
+    font-size: 36px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #000;
+    padding: 16px;
+}
+.cart_icon a
+{
+    text-decoration: none;
+}
+.cart span {
+    position: absolute;
+    content: "";
+    display: block;
+    font-size: 1.6rem;
+    bottom: 40px;
+    height: 20px;
+    display: flex;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    background: red;
+    color: #fff;
+    border-radius: 50%;
+}
+.cart
+{
+    position: fixed;
+    right: 37px;
+    bottom: 37px;
+    z-index: 999;
+}
+.cart:hover
+{
+    opacity: 0.8;
+}
+.cart_icon i
+{
+    font-size: 36px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #000;
+    padding: 16px;
+}
+.cart_icon a
+{
+    text-decoration: none;
+}
+.cart span {
+    position: absolute;
+    content: "";
+    display: block;
+    font-size: 1.6rem;
+    bottom: 40px;
+    height: 20px;
+    display: flex;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    background: red;
+    color: #fff;
+    border-radius: 50%;
+}

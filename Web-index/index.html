@@ -16,10 +16,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&family=Marcellus&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .login.header__navbar-list-item:nth-child(8):hover:after
+        {
+            display: block;
+        }
+        .login.header__navbar-list-item:nth-child(8):after
+        {
+        position: absolute;
+        content: "";
+        width: 47px;
+        height: 3px;
+        right: 12px;
+        border-radius: 2px;
+        top: 68%;
+        background-color: var(--white-color);
+        display: none;
+        animation: fadeIn1 ease-in-out 400ms;
+        }
+    </style>
 </head>
 <body>
-    <div class="box">
+    <div class="loader" id="loader">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+</div>
+    <div class="box" id="box">
         <div class="header js-header">
             <div class="grid wide">
                 <div class="header__navbar">
@@ -31,13 +57,13 @@
                             <a href="" class="header__navbar-item-link">Home</a>
                             </li>
                         <li class="header__navbar-list-item">
-                            <a href="/About-us-main/index.html" class="header__navbar-item-link">About Us</a>
+                            <a href="/About-us-main/index_aboutus.html" class="header__navbar-item-link">About Us</a>
                             </li>
                         <li class="header__navbar-list-item">
                             <a href="#section_id" class="header__navbar-item-link">Services</a>
                             </li>
                         <li class="header__navbar-list-item">
-                            <a href="/Ritual-Coffee_-Gallery-main/index.html" class="header__navbar-item-link"> Gallery</a>
+                            <a href="/Ritual-Coffee_-Gallery-main/index_gallery.html" class="header__navbar-item-link"> Gallery</a>
                            </li>
                         <li class="header__navbar-list-item">
                             <a href="/Project/html/blog_detail1.html" class="header__navbar-item-link">Blogs</a>
@@ -48,7 +74,7 @@
                             <li class="header__navbar-list-item">
                                 <a href="/Product-List-main/index_no_login.html" class="header__navbar-item-link">Product</a>
                                 </li>
-                        <li class="header__navbar-list-item">
+                        <li class="header__navbar-list-item login">
                             <a href="./login.html" class="header__navbar-item-link">Login</a>
                             </li>
                     </ul>
@@ -59,38 +85,40 @@
         <div class="header__slider-img">
             <img src="./img/header.jpg" alt="" class="slider_img">
             <img src="./img/header1.jpg" alt="" class="slider_img">
-            <div class="slider__content">
+            <div class="slider__content" data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1500">
                 <h2>Coffee Day</h2>
                 <h3>COME AND TRY OUR BEST COFFEE !</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                <a href="#" class="slider__button">
-                    Order Now
-                </a>
+               
+                    <a href="#" class="slider__button">
+                        Order Now
+                    </a>
+               
             </div>
         </div>
       
         <div class="about__us">
                 <div class="about__us--img">
-                    <img src="./img/abus-img1.jpg" alt="" class="abus-img1">
-                    <img src="./img/abus-img3.png" alt="" class="abus-img3">
-                    <img src="./img/abus-img2.jpg" alt="" class="abus-img2">
+                    <img src="./img/abus-img1.jpg" alt="" class="abus-img1"  data-aos="fade-right" data-aos-duration="1500">
+                    <img src="./img/abus-img3.png" alt="" class="abus-img3"  data-aos="fade-right" data-aos-duration="1500">
+                    <img src="./img/abus-img2.jpg" alt="" class="abus-img2"  data-aos="fade-right" data-aos-duration="1500">
                 </div>
-                <div class="about__us-content">
+                <div class="about__us-content" data-aos="flip-left" data-aos-duration="1500">
                     <h3>About us</h3>
                     <h2>We Combine Classics and Modernity</h2>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                     <p>Lorem Ipsum is simply dummy text of the printing and unknown printer typesetting industry. </p>
                     <h4>Mon-Fri: 9 AM - 22 PM</h4>
                     <h4>Saturday: 9 AM – 20 PM</h4>
-                    <a href="">Read More</a>
+                    <a href="#">Read More</a>
                 </div>
             </div>
       
         <section class="section" id="section_id">
                 <div class="section__content">
                     <div class="row__nowrap">
-                        <div class=" l-3 section_test">
-                           <div class="section__icon-2">
+                        <div class=" l-3 section_test"  data-aos="flip-left">
+                           <div class="section__icon-2" >
                             <i class="fa-solid fa-truck icon-2"></i>
                             <h2 class="section__header-2">Free Delivery</h2>
                            <p class="section__content-2">Lorem Ipsum is simply dummy text of the
@@ -98,8 +126,8 @@
                            </div>
                            
                         </div>
-                        <div class=" l-3 section_test">
-                           <div class="section__icon-2">
+                        <div class=" l-3 section_test"  data-aos="flip-left">
+                           <div class="section__icon-2" >
                             <i class="fa-sharp fa-solid fa-retweet icon-2"></i>
                             <h2 class="section__header-2">Free Returns</h2>
                             <p class="section__content-2">
@@ -108,8 +136,8 @@
                            </div>
                            
                         </div>
-                        <div class=" l-3 section_test">
-                           <div class="section__icon-2">                         
+                        <div class=" l-3 section_test"  data-aos="flip-left">
+                           <div class="section__icon-2" >                         
                             <i class="fa-solid fa-sack-dollar icon-2"></i>
                             <h2 class="section__header-2">Secure Payment</h2>
                             <p class="section__content-2">
@@ -117,8 +145,8 @@
                             </p>
                            </div>
                         </div>
-                        <div class=" l-3 section_test">
-                         <div class="section__icon-2"> 
+                        <div class=" l-3 section_test"  data-aos="flip-left">
+                         <div class="section__icon-2" > 
                             <i class="fa-solid fa-gift icon-2"></i>
                             <h2 class="section__header-2">Gift Services</h2>
                             <p class="section__content-2">
@@ -133,7 +161,7 @@
         <div class="container">
             <div class="container__content">
                 <div class="row__nowrap">
-                    <div class="col l-4">
+                    <div class="col l-4" data-aos="fade-right" data-aos-duration="1500">
                         <div class="container__content-1">
                             <div class="container-content-p">
                                 <h2>The Perfect Cup</h2>
@@ -167,11 +195,11 @@
                         </div>
                         </div>
                     <div class="col l-4">
-                        <div class="container__slider">
+                        <div class="container__slider" data-aos="fade-up" data-aos-duration="1500">
                             <img src="/Web-index/img/container__slider.png" class="container__slider-img" alt="">
                         </div>
                     </div>
-                    <div class="col l-4">
+                    <div class="col l-4" data-aos="fade-up-right" data-aos-duration="1500">
                         <div class="container__content-3">
                             <div class="container-content-icon-1">
                                 <div class="container__content-circle-1"></div>
@@ -217,32 +245,32 @@
                 </div>
                 <div class="gallery__img">
                     <div class="row__nowrap">  
-                    <div class="col l-2 gallery__img-slider-1 js-img js-onmouse" >
+                    <div class="col l-2 gallery__img-slider-1 js-img js-onmouse" data-aos="zoom-in" data-aos-duration="500" data-aos-easing="linear" >
                         <img src="/Web-index/img/gallery1.jpg" alt="">
                         <div class="slider_search-1 js-search">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
                     
-                    <div class="col l-2 gallery__img-slider-2 js-img js-onmouse">
+                    <div class="col l-2 gallery__img-slider-2 js-img js-onmouse" data-aos="zoom-in" data-aos-duration="500" data-aos-easing="linear">
                         <img src="/Web-index/img/gallery2.jpg" alt="">
                         <div class="slider_search-2 js-search">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
-                    <div class="col l-2 gallery__img-slider-3 js-img js-onmouse">
+                    <div class="col l-2 gallery__img-slider-3 js-img js-onmouse" data-aos="zoom-in" data-aos-duration="500" data-aos-easing="linear">
                         <img src="/Web-index/img/gallery3.jpg" alt="">
                         <div class="slider_search-3 js-search">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
-                    <div class="col l-2 gallery__img-slider-4 js-img js-onmouse">
+                    <div class="col l-2 gallery__img-slider-4 js-img js-onmouse" data-aos="zoom-in" data-aos-duration="500" data-aos-easing="linear">
                         <img src="/Web-index/img/gallery4.jpg" alt="">
                         <div class="slider_search-4 js-search">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
-                    <div class="col l-2 gallery__img-slider-5 js-img js-onmouse">
+                    <div class="col l-2 gallery__img-slider-5 js-img js-onmouse" data-aos="zoom-in" data-aos-duration="500" data-aos-easing="linear">
                         <img src="/Web-index/img/gallery6.jpg" alt="">
                         <div class="slider_search-5 js-search">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -263,7 +291,7 @@
                     <h2>TESTIMONIAL</h2>
                 </div>
                 <!-- 1 -->
-               <div class="customer_section js-feedback">
+               <div class="customer_section js-feedback" data-aos="fade-up" data-aos-duration="1500">
                 <div class="customer_section-info">
                     <div class="customer_section-avatar">
                         <img src="/Web-index/img/avatar-section1.jpg" alt="">
@@ -356,10 +384,10 @@
                        </div>
                 </div>
                </div>
-               <div class="customer_button-slider-right js-feedback-right " onclick="next_right(1)">
+               <div class="customer_button-slider-right js-feedback-right " data-aos="fade-up" data-aos-duration="1500" onclick="next_right(1)">
                 <i class="fa-solid fa-chevron-right"></i>
                </div>
-               <div class="customer_button-slider-left js-feedback-left" onclick="next_left(-1)">
+               <div class="customer_button-slider-left js-feedback-left" data-aos="fade-up" data-aos-duration="1500" onclick="next_left(-1)">
                 <i class="fa-solid fa-chevron-left"></i>
                </div>
             
@@ -369,7 +397,7 @@
         <div class="blog">
             <div class="blog_header">
                 <img src="/Web-index/img/blogheader.jpg"  alt="">
-                <div class="blog_header_text">
+                <div class="blog_header_text" data-aos="zoom-in-down" data-aos-duration="2000">
                     <p class="blog_header_text_p">FROM OUR BLOG</p>
                     <h2>OUR NEWS & ARTICLES</h2>
                     <div class="blog_content">
@@ -637,7 +665,9 @@
         </div>
     </div>
         <script type="text/javascript" src="./css/javascript.js"></script>
-        
+       <script>
+        AOS.init();
+       </script>
 
 
 </body>

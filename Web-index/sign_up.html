@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./font/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container-fluid">
@@ -52,24 +52,24 @@
                     <div class="login_line">
                         <span>Or</span>
                     </div>
+                    <form action="" method="POST" class="form" id="form-1">
                     <div class="signUp">
-                        <div class="signUp_name">
+                        <div class="signUp_name form-group">
                             <label for="name">Name</label>
-                            <input type="text" required name="name" id="name" class="js-name">
-                        </div>
-                        <div class="signUp_username">
-                            <label for="Uname">Username</label>
-                            <input type="text" required name="Uname" id="Uname" class="js-username" required>
+                            <input type="text"  name="name" id="fullname" class="js-name form-control">
+                            <span class="form-message"></span>
                         </div>
                     </div>
-                   <div class="signUP_email">
+                   <div class="signUP_email form-group">
                     <label for="email">Enter your email:</label>
-                    <input type="email" id="email" name="email" class="js-email">
+                    <input type="email" id="email" name="email" class="js-email form-control">
+                    <span class="form-message"></span>
                    </div>
 
-                   <div class="signUP_password">
-                    <label for="Upassword">Password</label>
-                    <input type="password" id="email" name="email" class="js-pass" minlength="6" placeholder="6+character" required>
+                   <div class="signUP_password form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="js-pass form-control" placeholder="6+character">
+                    <span class="form-message"></span>
                    </div>
                    <div class="form-field">
                     <fieldset>
@@ -83,8 +83,9 @@
                     </fieldset>
                   </div>
                   <div class="form-button">
-                    <button onclick="store_data() " class="button">Submit</button>
+                    <button class="button">Submit</button>
                   </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -92,9 +93,55 @@
            <a href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c.2 35.5-28.5 64.3-64 64.3H128.1c-35.3 0-64-28.7-64-64V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24zM352 224c0-35.3-28.7-64-64-64s-64 28.7-64 64s28.7 64 64 64s64-28.7 64-64zm-96 96c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H256z"/></svg></a> 
         </div>
     </div>
-    <div class="signup_success">
-        <p>Congratulations, you have successfully registered, please login to proceed shopping</p>
+    <div class="modal">
+        <div class="modal_content">
+            <div class="modal_sucess">
+                <div class="sucess_close_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>                </div>
+                <div class="sucess_icon">
+                    <i class="fa-solid fa-user-check icon_check"></i>               
+                 </div>
+                <div class="sucess_heading">
+                    <p>You have succeeded !</p>
+                </div>
+                <div class="sucess_text">
+                    <p>Somehow, it wasn't the best though</p>
+                </div>
+                <div class="sucess_button">
+                    <button>
+                        <a href="./login.html">Ready to login <span class="icon_btn"><i class="fa-solid fa-arrow-right"></i></span></a>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
-<script type="text/javascript" src="./css/login.js"></script>
+<script type="text/javascript" src="./css/signup.js"></script>
+<script>
+    Validator({
+            form: '#form-1',
+            errorSelector:'.form-message',
+            rules: [
+                Validator.isRequired('#fullname','Please enter this field'),
+                Validator.isRequired('#email','Please enter this field'),
+                Validator.isEmail('#email','This field must be email'),
+                Validator.isMinlength('#password',6,'Please enter at least 6 characters'),
+            ],
+            onSubmit(data)
+            {
+              console.log(data);
+              localStorage.setItem(
+                "credentials",
+                JSON.stringify({ password: data.password,name:data.name,email:data.email })
+            );
+            const success=document.querySelector('.modal');
+            success.classList.add('active');
+            const closeModal = document.querySelector('.sucess_close_icon');
+            closeModal.onclick = () =>
+            {
+                success.classList.remove('active');
+            }
+            }
+        })
+</script>
 </html>

@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="/Project/css/checkout.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/Project/Icon/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/all.css">
@@ -187,7 +189,9 @@
                         </div>
                     </div>
                 </form>
-                <button onclick="success()" type="submit" class="button-alt">Place Order</button>
+                    <button onclick="showSuccessToast()" type="submit" class="button-alt">
+                        <p>Place Order</p> 
+                    </button>
         </div>
 
         <div class="footer">
@@ -342,23 +346,12 @@
                 </div>
             </div>
         </div>
-        <div class="return">
-            <a href="/Product-List-main/index.html">
-            <button class="button-return">
-              Return to Product page ?  
-            </button>
-            </a>
-        </div>
-        <div class="modal">
-            <div class="loader"></div>
-        </div>
-        <div class="proceed_success">
-            <p>Order Successfully !</p>
-        </div>
+        <div id="toast"></div>
         
         </div>
     </body>
         <script>
+            const orderBtn = document.querySelector('.button-alt');
              //when scroll, header will change
             var prevScrollpos = window.pageYOffset;
             window.onscroll = function() {
@@ -383,30 +376,63 @@
                 document.querySelector('.js-total').innerHTML=total_product + ".00";
 
 
-                function success()
-                {
-                    document.querySelector('.modal').style.display="block";
-                    setTimeout(function()
-                    {
-                        document.querySelector('.modal').style.display="none";
-                    },1000)
-                    setTimeout(function()
-                    {
-                        document.querySelector('.proceed_success').style.top="0";
-                    },1500)
-                    setTimeout(function()
-                    {
-                        document.querySelector('.proceed_success').style.top="-96px";
-                    },3000)
-                    setTimeout(function(){
-                        
-                        var btnReturn=document.querySelector('.button-return');
-                        var Return=document.querySelector('.return');
-                        var calc_Y_offset=pageYOffset+100;
-                        Return.style.setProperty('--top', calc_Y_offset + "px");;
-                        btnReturn.style.transform='translateX(0px)';
 
-                    },4000)
+                function showSuccessToast() {
+                toast({
+                title: "Successfully!",
+                message: "You have successfully paid for your order.",
+                type: "success",
+                duration: 5000
+                });
+                orderBtn.innerHTML=`<a href="/Product-List-main/index.html">Return To Product Page</a>`
+               
+                }
+                
+                function toast({ title = "", message = "", type = "info", duration = 3000 }) {
+                const main = document.getElementById("toast");
+                if (main) {
+                const toast = document.createElement("div");
+
+                // Auto remove toast
+                const autoRemoveId = setTimeout(function () {
+                main.removeChild(toast);
+                }, duration + 1000);
+
+                // Remove toast when clicked
+                toast.onclick = function (e) {
+                if (e.target.closest(".toast__close")) {
+                main.removeChild(toast);
+                clearTimeout(autoRemoveId);
+                }
+                };
+
+                // const icons = {
+                // success: "fas fa-check-circle",
+                // info: "fas fa-info-circle",
+                // warning: "fas fa-exclamation-circle",
+                // error: "fas fa-exclamation-circle"
+                // };
+                // const icon = icons[type];
+                const delay = (duration / 1000).toFixed(2);
+
+                toast.classList.add("toast", `toast--${type}`);
+                toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`;
+                //Có thể thêm dòng này vào thay chỗ icon
+                // <i class="${icon}"></i>
+                toast.innerHTML = `
+                <div class="toast__icon">
+                <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="toast__body">
+                <h3 class="toast__title">${title}</h3>
+                <p class="toast__msg">${message}</p>
+                </div>
+                <div class="toast__close">
+                <i class="fas fa-times"></i>
+                </div>
+                `;
+                main.appendChild(toast);
+                }
                 }
                
         </script>

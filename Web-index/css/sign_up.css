@@ -245,15 +245,11 @@ input[type='checkbox']
     width: 425px;
 }
 
+
 .signUp_name
 {
-    transform: translateX(114px);
-    width: 200px;
-}
-.signUp_username
-{
-    width: 200px;
-    margin-left: 139px;
+    width: 425px;
+    transform: translateX(57px);
 }
 label
 {
@@ -354,21 +350,142 @@ label a
     position: relative;
     margin-top: 20px;
 }
-.signup_success
+
+.form-button
+{
+    width: 430px;
+    margin-left: 222px;
+}
+
+.modal
+{
+    background-color: rgba(140, 139, 139, 0.8) !important;
+    transition: all linear 10s;
+}
+@keyframes fadeModal {
+    to
+    {
+        opacity: 0;
+    }
+    from
+    {
+        opacity: 1;
+    }
+}
+.modal.active
+{
+    display: block !important;
+}
+.modal_content
 {
     position: absolute;
-    top: 0;
-    background-color: rgb(19, 217, 48);
-    height: 50px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 1.6rem;
-    transform: translateY(-51px);
+    width: 400px;
+    height: 500px;
+    top: 80px;
+    right: 520px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 20px;
 }
-.signup_success.open_success
+.sucess_close_icon
 {
-    transform: translateY(0);
+    width: 20px;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
 }
+.icon_check
+{
+    font-size: 100px;
+    color: rgb(38 249 222);
+    right: 120px;
+    top: 104px;
+    position: absolute;
+}
+.sucess_heading
+{
+    position: absolute;
+    top: 250px;
+    font-size: 21px;
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sucess_text
+{
+    position: absolute;
+    top: 300px;
+    font-size: 18px;
+    width: 166px;
+    right: 115px;
+    text-align: center;
+    color: rgba(164, 172, 172, 0.8);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sucess_button
+{
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    position: absolute;
+    bottom: 14px;
+    display: flex;
+    left: 19px;
+    align-items: center;
+    height: 58px;
+    justify-content: center;
+    width: 90%;
+    background: rgb(243 240 240 / 80%);
+    /* box-shadow: 0px 0px 126px grey; */
+}
+.sucess_button:hover a
+{
+    color: rgb(11 201 177);
+   
+}
+.sucess_button button
+{
+    border: none;
+    background: #fff;
+    
+    opacity: 0.9;
+    font-weight: 500;
+    background: rgb(243 240 240 / 80%);
+}
+.sucess_button a
+{
+    color: rgb(11 201 177);
+    text-decoration: none;
+}
+.icon_btn
+{
+    padding: 10px 15px;
+    border-radius: 50%;
+    background-color: #ebebeb;
+}
+.icon_btn:hover
+{
+    opacity: 0.6;
+}
+/* form */
+.form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-group.invalid .form-control {
+    border-color: #f33a58;
+  }
+  
+  .form-group.invalid .form-message {
+    color: #f33a58;
+  }
+  
+  .form-message {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+  }

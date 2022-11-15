@@ -215,15 +215,19 @@
                                     <h2 class="widget-title">Filter by price</h2>
                                 </div>
                                 <div class="widget-bar">
-                                    <div class="widget-tool-bar"></div>
-                                    <div class="widget-price-amount grid-container-2cols">
-                                        <div class="price-label">
-                                            <span class="price-info">Price: $12-$600</span>
+                                    <div class="widget-bar">
+                                        <!--widget-tool-bar-->
+                                        <input type="range" min="1" max="600" value="1" step="1" class="widget-tool-bar" id="slide"/>
+                                        <div class="widget-price-amount grid-container-2cols">
+                                            <h4 class="price-info">Price:<span id="output"></span>$</h4>
+                                            <a href="" class="price-filter-link">
+                                                <button class="price-filter">
+                                                    <span class="price-filter-text">Filter</span>
+                                                </button>
+                                            </a>
                                         </div>
-                                        <button class="price-filter">
-                                            <span class="price-filter-text">Filter</span>
-                                        </button>
                                     </div>
+                                   
                                 </div>
                             </div>
 
@@ -539,6 +543,16 @@
                 document.querySelector('.modal-login').style.display='none';
             }
             }
+
+            const slide = document.querySelector("#slide")
+            const output = document.querySelector("#output")
+            const showValue = () =>{
+            output.textContent = slide.value
+            }
+            slide.oninput = () => {
+            showValue()
+            }
+            showValue()
         </script>
     </body>
 </html>

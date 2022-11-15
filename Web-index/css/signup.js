@@ -1,48 +1,6 @@
-            
-            const loginBtn = document.querySelector('.js-button');
-            var isAdmin = false;
-            const nameofaccount="Văn Sìnl";
-            const name_admin='tinbalon2';
-            const pass_admin='123456';
-            loginBtn.onclick = () => {
-                
-                var credentials = JSON.parse(localStorage.getItem("credentials"));
-                const userName=document.querySelector('.js-username-login').value;
-                const userPass=document.querySelector('.js-pass-login').value;
-                const login_false=document.querySelector('.js-false');
-                if((document.querySelector('.js-username-login').value ==name_admin 
-                && document.querySelector('.js-pass-login').value==pass_admin))
-                {
-                    isAdmin = true;
-                    setConfig(isAdmin);
-                    location.replace("./index_login_success.html")
-                }
-                else if (document.querySelector('.js-username-login').value ==credentials.email 
-                && document.querySelector('.js-pass-login').value==credentials.password ) 
-                {
-                    isAdmin = false;
-                    setConfig(isAdmin);
-                    location.replace("./index_login_success.html")
-                } 
-                else 
-                {
-                    login_false.classList.add('open_false');
-                    setTimeout(function()
-                    {
-                        login_false.classList.remove('open_false');
-                    },2000)
-                }
-                }
-                function setConfig(value)
-                {
-                    localStorage.setItem(
-                        "IsAdmin",
-                        JSON.stringify({ isAdmin: value })
-                    );
-                }
 
 
-
+            // Đối tượng validator
             function Validator(options)
             {
             var selectorRules={};
@@ -91,6 +49,40 @@
             {
             //Bỏ hành vi mặc định của submit form đi
             e.preventDefault();
+
+            //Lặp qua từng rules và validate luôn
+            var isValid=true; //Biến kiểm tra xem form đã nhập đúng hết chưa
+            options.rules.forEach(function(rule)
+            {
+            var inputElement = formElement.querySelector(rule.selector);
+            if(validate(inputElement,rule))
+            {
+            isValid = false;
+            }
+            })
+            if(isValid)
+            {
+            //Trường hợp submit với js
+            // Lấy ra tất cả thẻ có name, tùy vào yêu cầu bài toán mà có thêm [name]:not(disable) 
+            // để lấy ra những ô input có name nhưng ko có disable
+            if(typeof options.onSubmit === "function")
+            {
+            var EnableInput = formElement.querySelectorAll('[name]');
+            var formValue = Array.from(EnableInput).reduce(function(value, input)
+            {
+            return (value[input.name] = input.value) && value;
+            },{});
+            options.onSubmit(formValue);
+            }
+            else
+            {
+
+            }
+            }
+            else
+            {
+            console.log("Có lỗi")
+            }
             }
             //Lặp qua mỗi rule và xử lý (lắng nghe sự kiến blur, input, ...)
             options.rules.forEach(function(rule)

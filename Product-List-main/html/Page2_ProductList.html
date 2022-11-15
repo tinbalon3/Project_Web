@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;700&family=Inconsolata:wght@200;300;400;500;700&family=Marcellus&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/Product-List-main/fonts/fontawesome-free-6.2.0-web/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
     <body>
         <div id="main">
@@ -54,9 +56,9 @@
                         
                     </div>
                 </div>
-                <div class="body__productList grid-container-2cols padding-150px">
+                <div class="body__productList grid-container-2cols padding-150px" data-aos="fade-up">
                     <div class="body__productList-container grid-container">
-                        <div class="body__product">
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="/Product-List-main/img/product-img-10.png" alt="Product image" class="body__product-img">
                                 <div class="body__product-img--modal">
@@ -73,7 +75,7 @@
                                 <h3 class="body__product-price">$30.00</h3>
                             </div>
                         </div>
-                        <div class="body__product">
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="/Product-List-main/img/product-img-11.png" alt="Product image" class="body__product-img">
                                 <div class="body__product-img--modal">
@@ -89,7 +91,7 @@
                                 <h3 class="body__product-price">$35.00</h3>
                             </div>
                         </div>
-                        <div class="body__product">
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="/Product-List-main/img/ProductList-img-MetalCup.png" alt="Product image" class="body__product-img">
                                 <div class="body__product-img--modal">
@@ -105,7 +107,7 @@
                                 <h3 class="body__product-price">$23.00</h3>
                             </div>
                         </div>
-                        <div class="body__product">
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="/Product-List-main/img/ProductList-img-DespensingTray.png" alt="Product image" class="body__product-img ">
                                 <div class="body__product-img--modal">
@@ -121,7 +123,7 @@
                                 <h3 class="body__product-price">$30.00</h3>
                             </div>
                         </div>
-                        <div class="body__product">
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="/Product-List-main/img/ProductList-img-MeasuringCup.png" alt="Product image" class="body__product-img">
                                 <div class="body__product-img--modal">
@@ -137,7 +139,7 @@
                                 <h3 class="body__product-price">$16.00</h3>
                             </div>
                         </div>
-                        <div class="body__product">
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="/Product-List-main/img/Productlist-img-CeramicCup.png" alt="Product image" class="body__product-img body__product-img--padding">
                                 <div class="body__product-img--modal">
@@ -153,7 +155,7 @@
                                 <h3 class="body__product-price">$37.00</h3>
                             </div>
                         </div>
-                        <div class="body__product">
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="/Product-List-main/img/productList-img-CoffeeCapsule.png" alt="Product image" class="body__product-img body__product-img--padding">
                                 <div class="body__product-img--modal">
@@ -471,25 +473,26 @@
         </div>
         <script>
             // when scroll, header will change
-        document.addEventListener("DOMContentLoaded",function() {
-        var menu=document.querySelector('.js-header');
-        var trangthai="duoi200";
-        window.addEventListener("scroll",function(){
-        var x = pageYOffset;
-        if(x > 100){
+            document.addEventListener("DOMContentLoaded",function() {
+            var menu=document.querySelector('.js-header');
+            var trangthai="duoi200";
+            window.addEventListener("scroll",function(){
+            var x = pageYOffset;
+            if(x > 100){
             if(trangthai == "duoi200")
             {
-                trangthai="tren200";
-                menu.classList.add('thaydoiheader');
+            trangthai="tren200";
+            menu.classList.add('thaydoiheader');
             }
-        }
-        else{
+            }
+            else{
             if(trangthai=="tren200"){
             menu.classList.remove('thaydoiheader');
             trangthai="duoi200";}
-        }
-    })
-})
+            }
+            })
+            })
+            AOS.init();
         </script>
     </body>
 </html>

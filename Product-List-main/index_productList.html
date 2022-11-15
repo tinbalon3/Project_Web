@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;700&family=Inconsolata:wght@200;300;400;500;700&family=Marcellus&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./fonts/fontawesome-free-6.2.0-web/css/all.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
     <body>
         <div id="main">
@@ -23,13 +25,13 @@
                                 <a href="/Web-index/index_login_success.html" class="header__navbar-item-link">Home</a>
                                 </li>
                             <li class="header__navbar-list-item">
-                                <a href="/About-us-main/index.html" class="header__navbar-item-link">About Us</a>
+                                <a href="/About-us-main/index_aboutus.html" class="header__navbar-item-link">About Us</a>
                                 </li>
                             <li class="header__navbar-list-item">
                                 <a href="#section_id" class="header__navbar-item-link">Services</a>
                                 </li>
                             <li class="header__navbar-list-item">
-                                <a href="/Ritual-Coffee_-Gallery-main/index.html" class="header__navbar-item-link"> Gallery</a>
+                                <a href="/Ritual-Coffee_-Gallery-main/index_gallery.html" class="header__navbar-item-link"> Gallery</a>
                                </li>
                             <li class="header__navbar-list-item">
                                 <a href="/Project/html/blog_detail1.html" class="header__navbar-item-link">Blogs</a>
@@ -54,8 +56,8 @@
                     </div>
                 </div>
                 <div class="body__productList grid-container-2cols padding-150px">
-                    <div class="body__productList-container grid-container">
-                        <div class="body__product">
+                    <div class="body__productList-container grid-container" >
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="./img/productList-img-1.png" alt="Product image" class="body__product-img">
                                 <div class="body__product-img--modal">
@@ -72,7 +74,7 @@
                                 <h3 class="body__product-price">$15.99</h3>
                             </div>
                         </div>
-                        <div class="body__product">
+                        <div class="body__product " data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="./img/productList-img-21.png" alt="Product image" class="body__product-img">
                                 <div class="body__product-img--modal">
@@ -88,7 +90,7 @@
                                 <h3 class="body__product-price">$23.99</h3>
                             </div>
                         </div>
-                        <div class="body__product">
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="./img/productList-img-3.png" alt="Product image" class="body__product-img">
                                 <div class="body__product-img--modal">
@@ -104,7 +106,7 @@
                                 <h3 class="body__product-price">$18.00</h3>
                             </div>
                         </div>
-                        <div class="body__product">
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="./img/backgroundCopy_1.png" alt="Product image" class="body__product-img ">
                                 <div class="body__product-img--modal">
@@ -120,7 +122,7 @@
                                 <h3 class="body__product-price">$12.00</h3>
                             </div>
                         </div>
-                        <div class="body__product">
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="./img/productList-img-5.png" alt="Product image" class="body__product-img">
                                <div class="body__product-img--modal">
@@ -136,7 +138,7 @@
                                 <h3 class="body__product-price">$21.00</h3>
                             </div>
                         </div>
-                        <div class="body__product">
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="./img/ProductList-img-6.png" alt="Product image" class="body__product-img body__product-img--padding">
                                 <div class="body__product-img--modal">
@@ -152,7 +154,7 @@
                                 <h3 class="body__product-price">$90.00</h3>
                             </div>
                         </div>
-                        <div class="body__product">
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="./img/ProductList-img-7.png" alt="Product image" class="body__product-img body__product-img--padding">
                                 <div class="body__product-img--modal">
@@ -168,7 +170,7 @@
                                 <h3 class="body__product-price">$600.00</h3>
                             </div>
                         </div>
-                        <div class="body__product">
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="./img/product-img-8.png" alt="Product image" class="body__product-img body__product-img--padding">
                                 <div class="body__product-img--modal">
@@ -184,7 +186,7 @@
                                 <h3 class="body__product-price">$25.00</h3>
                             </div>
                         </div>
-                        <div class="body__product">
+                        <div class="body__product" data-aos="fade-up">
                             <div class="body__product-img-content">
                                 <img src="./img/ProductList-img-9.png" alt="Product image" class="body__product-img body__product-img--padding">
                                 <div class="body__product-img--modal">
@@ -213,15 +215,19 @@
                                     <h2 class="widget-title">Filter by price</h2>
                                 </div>
                                 <div class="widget-bar">
-                                    <div class="widget-tool-bar"></div>
-                                    <div class="widget-price-amount grid-container-2cols">
-                                        <div class="price-label">
-                                            <span class="price-info">Price: $12-$600</span>
+                                    <div class="widget-bar">
+                                        <!--widget-tool-bar-->
+                                        <input type="range" min="1" max="600" value="1" step="1" class="widget-tool-bar" id="slide"/>
+                                        <div class="widget-price-amount grid-container-2cols">
+                                            <h4 class="price-info">Price:<span id="output"></span>$</h4>
+                                            <a href="" class="price-filter-link">
+                                                <button class="price-filter">
+                                                    <span class="price-filter-text">Filter</span>
+                                                </button>
+                                            </a>
                                         </div>
-                                        <button class="price-filter">
-                                            <span class="price-filter-text">Filter</span>
-                                        </button>
                                     </div>
+                                   
                                 </div>
                             </div>
 
@@ -509,6 +515,17 @@
             }
             prevScrollpos = currentScrollPos;
             }
+            AOS.init();
+
+            const slide = document.querySelector("#slide")
+            const output = document.querySelector("#output")
+            const showValue = () =>{
+            output.textContent = slide.value
+            }
+            slide.oninput = () => {
+            showValue()
+            }
+            showValue()
         </script>
     </body>
 </html>

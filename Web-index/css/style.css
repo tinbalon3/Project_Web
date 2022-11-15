@@ -1,3 +1,6 @@
+::-webkit-scrollbar {
+    width: 10px;
+  }
 .header
 {
     height: 96px;
@@ -42,7 +45,7 @@
 }
 .header__navbar-list-item:nth-child(1):after
 {
-    display: block;
+
     position: absolute;
     content: "";
     width: 50px;
@@ -61,14 +64,18 @@
 .header__navbar-list-item:nth-child(4):hover:after,
 .header__navbar-list-item:nth-child(5):hover:after,
 .header__navbar-list-item:nth-child(6):hover:after,
-.header__navbar-list-item:nth-child(7):hover:after
+.header__navbar-list-item:nth-child(7):hover:after,
+.header__navbar-list-item:nth-child(8):hover .span
+
+
 {
     display: block;
     
 }
+
 .header__navbar-list-item:nth-child(2):after
 {
-    display: block;
+   
     position: absolute;
     content: "";
     width: 75px;
@@ -78,12 +85,25 @@
     top: 68%;
     background-color: var(--white-color);
     display: none;
-    animation: fadeIn1 ease-in-out 400ms;
-    
+    animation: fadeIn1 ease-in-out 400ms; 
+}
+.span
+{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 3px;
+    right: 0px;
+    border-radius: 2px;
+    top: 68%;
+    background-color: var(--white-color);
+    display: none;
+    animation: fadeIn1 ease-in-out 400ms; 
 }
 .header__navbar-list-item:nth-child(3):after
 {
-    display: block;
+
     position: absolute;
     content: "";
     width: 69px;
@@ -94,11 +114,11 @@
     background-color: var(--white-color);
     display: none;
     animation: fadeIn1 ease-in-out 400ms;
-    
 }
+
 .header__navbar-list-item:nth-child(4):after
 {
-    display: block;
+ 
     position: absolute;
     content: "";
     width: 57px;
@@ -113,7 +133,7 @@
 }
 .header__navbar-list-item:nth-child(5):after
 {
-    display: block;
+  
     position: absolute;
     content: "";
     width: 44px;
@@ -128,7 +148,7 @@
 }
 .header__navbar-list-item:nth-child(6):after
 {
-    display: block;
+   
     position: absolute;
     content: "";
     width: 87px;
@@ -145,9 +165,9 @@
 {
     position: absolute;
     content: "";
-    width: 64px;
+    width: 75px;
     height: 3px;
-    right: 0px;
+    right: 10px;
     border-radius: 2px;
     top: 68%;
     background-color: var(--white-color);
@@ -218,12 +238,28 @@
     color: var(--white-color);
     font-size: 1.6rem;
     background-color: #97552c;
-    transition: all ease-in-out 0.3s;
+}
+.BtnOrder
+{
+    animation: sliderLeftBtn linear 1s;
+}
+@keyframes sliderLeftBtn {
+    from 
+    {
+       transform: translateX(-100px);
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 .slider__button:hover
 {
     background-color: #fff;
     color: #000;
+    transition: all ease-in-out 0.3s;
 }
 .header__slider-img::after
 {
@@ -1056,7 +1092,7 @@
 {
     height: 20px;
     position: absolute;
-    top: 72%;
+    top: 85%;
     display: flex;
     left: 45%;
 }
@@ -1535,6 +1571,7 @@
     color: #000;
     border-radius: 50%;
     padding: 0px;
+    cursor: pointer;
 }
 .icon_avatar i
 {
@@ -1551,16 +1588,34 @@
     background-color: #fff;
     position: absolute;
     z-index: 1;
-    left: -10px;
+    left: 50px;
 }
 .nav_ava
 {
     position: absolute;
-    animation: fadeIn ease-in-out 1s;
+    animation: fadeNav linear 0.3s;
+    display: none;
+    cursor: pointer;
+}
+@keyframes fadeNav {
+    0%
+    {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.list_user_item.no_active
+{
     display: none;
 }
 .list_user_item
 {
+    display: block;
     line-height: 43px;
     border-bottom: 1px solid #dbd0d0;
     list-style: none;
@@ -1607,7 +1662,7 @@
     display: block;
     top: -53px;
     border: 36px solid;
-    right: -120px;
+    right: -150px;
     border-color: transparent transparent #fff transparent;
 }
 .header__navbar-list-item:nth-child(7):hover .nav_ava
@@ -1654,4 +1709,61 @@
     background: red;
     color: #fff;
     border-radius: 50%;
+}
+
+/* loader */
+.box
+{
+    min-height: 0;
+    transition: all linear 0.3s;
+}
+.item{
+    background-color: rgb(245, 166, 48);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 5px;
+    animation: effect 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes effect {
+    from{
+        transform: translateY(25px);
+        background-color: rgb(225, 85, 110);
+    }to{
+        transform: translateY(0);
+    }
+    
+}
+
+.item:nth-child(2),.item:nth-child(2)::before{
+    animation-delay: 0.25s;
+}
+.item:nth-child(3),.item:nth-child(3)::before{
+    animation-delay: 0.5s;
+}
+@keyframes fadeOutPage {
+    to {
+      opacity: 0;
+    }
+  }
+@keyframes fadeInPage {
+    to {
+      
+      min-height: 100%;
+    }
+  }
+
+.loader
+{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #16191e;
+    position: absolute;
+    z-index: 1000;
+    transition: all linear 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
