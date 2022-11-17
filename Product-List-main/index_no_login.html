@@ -222,7 +222,8 @@
                             </div>
                         </div>
                         <div class="widget-filter">
-                                <form action="">
+                            <div class="form_option">
+                                <form action="" class="option_price">
                                     <div class="filter-price-checkbox">
                                         <div class="squaredcheck">
                                             <input type="radio" value="1" id="squaredcheck" class="checkbox" name="check" checked />
@@ -238,11 +239,32 @@
                                         </div>
                                     </div>
                                 </form>
+                                <form action="" class="option_types">
+                                    <div class="filter-price-checkbox">
+                                        <div class="squaredcheck">
+                                            <input type="radio" value="1" id="squaredcheck" class="phanloai" name="check" checked />
+                                            <label for="squaredcheck"><span class="squaredcheck-price">Black</span></label>
+                                        </div>
+                                        <div class="squaredcheck">
+                                            <input type="radio" value="2" id="squaredcheck" class="phanloai" name="check" checked />
+                                            <label for="squaredcheck"><span class="squaredcheck-price">Latte</span></label>
+                                        </div>
+                                        <div class="squaredcheck">
+                                            <input type="radio" value="3" id="squaredcheck" class="phanloai" name="check" checked />
+                                            <label for="squaredcheck"><span class="squaredcheck-price">Cappucino</span></label>
+                                        </div>
+                                        <div class="squaredcheck">
+                                            <input type="radio" value="3" id="squaredcheck" class="phanloai" name="check" checked />
+                                            <label for="squaredcheck"><span class="squaredcheck-price">Americano</span></label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                                 <div class="price-filter-link">
                                     <button class="price-filter">
                                         <span class="price-filter-text">Filter</span>
                                     </button>
-                                    <button class="clear" onclick="ClearOption()">
+                                    <button class="clear" onclick="ClearOption(option,option_product)">
                                         <span class="clear-option">Clear</span>
                                     </button>
                                 </div>

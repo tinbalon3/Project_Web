@@ -742,7 +742,9 @@ tr {
       opacity: 0;
     }
   }
-  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
   .toast--success {
     border-color: #47d864;
   }

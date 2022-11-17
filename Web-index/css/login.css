@@ -306,7 +306,9 @@ label a
 {
     width: 100%;
 }
-
+::-webkit-scrollbar {
+    width: 10px;
+  }
 /* form */
 .form-group.invalid .form-control {
     border-color: #f33a58;

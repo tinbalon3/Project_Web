@@ -367,7 +367,9 @@
     font-size: 15px;
 }
 
-
+::-webkit-scrollbar {
+    width: 10px;
+  }
 
 .body__introduction-banner{
     background-image: url('/About-us-main/img/tb-about-us-banner-bg.jpg');

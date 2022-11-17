@@ -6,7 +6,8 @@ var arrayOfProduct = [
     price: '$30.00',
     priceCurrent:30,
     image: '/Product-List-main/img/product-img-10.png',
-    link:'/Product-List-main/html/Detail_ProductList.html'
+    link:'/Product-List-main/html/Detail_ProductList.html',
+    type:1
     },
     {
     id: 2,
@@ -14,7 +15,8 @@ var arrayOfProduct = [
     price: '$23.99',
     priceCurrent:23,
     image: '/Product-List-main/img/product-img-11.png',
-    link: '/Product-List-main/html/Detail_FrenchPress.html'
+    link: '/Product-List-main/html/Detail_FrenchPress.html',
+    type:2
     },
     {
     id: 3,
@@ -22,7 +24,8 @@ var arrayOfProduct = [
     price: '$18.00',
     priceCurrent:18,
     image: '/Product-List-main/img/productList-img-3.png',
-    link: '/Product-List-main/html/Detail_KenyaCoffee.html'
+    link: '/Product-List-main/html/Detail_KenyaCoffee.html',
+    type:3
     },
     {
     id: 4,
@@ -30,7 +33,8 @@ var arrayOfProduct = [
     price: '$12.00',
     priceCurrent:12,
     image: '/Product-List-main/img/backgroundCopy_1.png',
-    link: '/Product-List-main/html/Detail_DolceGusto.html'
+    link: '/Product-List-main/html/Detail_DolceGusto.html',
+    type:4
     },
     {
     id: 5,
@@ -38,7 +42,8 @@ var arrayOfProduct = [
     price: '$21.00',
     priceCurrent:21,
     image: '/Product-List-main/img/productList-img-5.png',
-    link:'/Product-List-main/html/Detai_ColumbiaCoffee.html'
+    link:'/Product-List-main/html/Detai_ColumbiaCoffee.html',
+    type:3
     },
     {
     id: 6,
@@ -46,7 +51,8 @@ var arrayOfProduct = [
     price: '$90.00',
     priceCurrent:90,
     image: '/Product-List-main/img/ProductList-img-6.png',
-    link:'/Product-List-main/html/Detail_CoffeeKettle.html'
+    link:'/Product-List-main/html/Detail_CoffeeKettle.html',
+    type:2
     },
     {
     id: 7,
@@ -54,7 +60,8 @@ var arrayOfProduct = [
     price: '$16.00',
     priceCurrent:16,
     image: '/Product-List-main/img/ProductList-img-MeasuringCup.png',
-    link:'./Detail_MeasuringCup.html'
+    link:'./Detail_MeasuringCup.html',
+    type:4
     },
     {
     id: 8,
@@ -63,6 +70,7 @@ var arrayOfProduct = [
     priceCurrent:25,
     image: '/Product-List-main/img/product-img-8.png',
     link:'/Product-List-main/html/Detail_Guatemala.html',
+    type:1
     },
     {
     id: 9,
@@ -71,6 +79,7 @@ var arrayOfProduct = [
     priceCurrent:80,
     image: '/Product-List-main/img/ProductList-img-9.png',
     link:'/Product-List-main/html/Detail_FilterHandle.html',
+    type:2,
     }
     ]
     //Lấy những id của product có tên trùng với tên nhập vào ô input
@@ -79,39 +88,138 @@ var arrayOfProduct = [
     var BtnSearch = document.querySelector('.price-filter');
     var productList = document.querySelector('.main-content');
     var valueRadio;
+    var valueProduct;
+    //Kiểm tra product nào có chữ cái trùng với sản phẩm trong object
     function CheckProduct()
     {
-        arrayOfProduct.forEach(function(item)
+        if(inputvalue.value == '')
         {
-            if(item.name.toUpperCase().indexOf(inputvalue.value.toUpperCase()) > -1 )
+            arrId = [1,2,3,4,5,6,7,8,9]
+        }
+        else
+        {
+            arrayOfProduct.forEach(function(item)
             {
-                if(valueRadio == 1)
+                if(item.name.toUpperCase().indexOf(inputvalue.value.toUpperCase()) > -1 )
                 {
-                    if(item.priceCurrent <= 50)
-                    {
-                        arrId.push(item.id)
-                    }
-                }
-                else if(valueRadio == 2)
-                {
-                    if(item.priceCurrent > 50 && item.priceCurrent <= 100)
-                    {
-                        arrId.push(item.id)
-                    }
-                }
-                else if(valueRadio == 3)
-                {
-                    if(item.priceCurrent > 100 )
-                    {
-                        arrId.push(item.id)
-                    }
-                }
-                else
                     arrId.push(item.id)
-            }
-        })
+                }
+            })
+        }
+        checkOptionPrice(arrId,valueRadio,arrayOfProduct);
+        checkOptionTypes(arrId,valueProduct,arrayOfProduct);
         console.log(arrId)
     }
+    function checkOptionTypes(arr,optionType,object)
+    {
+    
+        var idWrong =[];
+        if(optionType == 1)
+        {
+            arr.forEach((item,index)=> {
+                if(object[item-1].type != 1)
+                {
+                    idWrong.push(index)
+                }
+            })
+            for(let i = idWrong.length-1;i>=0;i--)
+            {
+                arr.splice(idWrong[i],1);
+            }
+        }
+        if(optionType == 2)
+        {
+            arr.forEach((item,index)=> {
+                if(object[item-1].type != 2)
+                {
+                    
+                    idWrong.push(index)
+                }
+            })
+            for(let i = idWrong.length-1;i>=0;i--)
+            {
+                arr.splice(idWrong[i],1);
+            }
+        }
+        if(optionType == 3)
+        {
+            arr.forEach((item,index)=> {
+                if(object[item-1].type != 3)
+                {
+                    idWrong.push(index)
+                }
+            })
+            for(let i = idWrong.length-1;i>=0;i--)
+            {
+                arr.splice(idWrong[i],1);
+            }
+        }
+        if(optionType == 4)
+        {
+            arr.forEach((item,index)=> {
+                if(object[item-1].type != 4)
+                {
+                    idWrong.push(index)
+                }
+            })
+            for(let i = idWrong.length-1;i>=0;i--)
+            {
+                arr.splice(idWrong[i],1);
+            }
+        }
+        else
+            return;
+        
+    }
+    function checkOptionPrice(arr,optionType,object)
+    {
+    
+        var idWrong =[];
+        if(optionType == 1)
+        {
+            arr.forEach((item,index)=> {
+                if(object[item-1].priceCurrent > 50)
+                {
+                    idWrong.push(index)
+                }
+            })
+            for(let i = idWrong.length-1;i>=0;i--)
+            {
+                arr.splice(idWrong[i],1);
+            }
+        }
+        if(optionType == 2)
+        {
+            arr.forEach((item,index)=> {
+                if(object[item-1].priceCurrent <= 50 || object[item-1].priceCurrent > 100)
+                {
+                    
+                    idWrong.push(index)
+                }
+            })
+            for(let i = idWrong.length-1;i>=0;i--)
+            {
+                arr.splice(idWrong[i],1);
+            }
+        }
+        if(optionType == 3)
+        {
+            arr.forEach((item,index)=> {
+                if(object[item-1].priceCurrent  <= 100)
+                {
+                    idWrong.push(index)
+                }
+            })
+            for(let i = idWrong.length-1;i>=0;i--)
+            {
+                arr.splice(idWrong[i],1);
+            }
+        }
+        else
+            return;
+        
+    }
+    //dùng để reset lại mảng id
     function clearArr(arrId)
     {
         arrId.splice(0,arrId.length)
@@ -126,7 +234,6 @@ var arrayOfProduct = [
        if(arrId.length == 0)
        {
             productList.innerHTML = `<div class="col-lg-12 no-find"> Couldn't find your product </div>`
-        
        }
        else
        {
@@ -196,38 +303,43 @@ var arrayOfProduct = [
     productList.innerHTML = firstpage.join('');
    }
    
-    function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.querySelector(".search__input");
-    filter = input.value.toUpperCase();
-    console.log(filter)
-    li = document.querySelectorAll(".body__product");
-    for (i = 0; i < li.length; i++) {
-    a = li[i].querySelector(".body__product-name");
-    txtValue = a.textContent;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-    li[i].style.display = "";
-    } else {
-    li[i].style.display = "none";
-    }
-    }
-    }
     //clear option
-    function ClearOption()
+    var option = document.querySelectorAll('.checkbox');
+    var option_product = document.querySelectorAll('.phanloai');
+    ClearOption(option,option_product);
+    function ClearOption(option,option_product)
     {
-        var ele = document.querySelectorAll(".checkbox");
-        for(var i=0;i<ele.length;i++)
-            ele[i].checked = false;
+        
+        for(let i=0;i<option.length;i++)
+            option[i].checked = false;
+        for(let i=0;i<option_product.length;i++)
+            option_product[i].checked = false;
         inputvalue.value='';
         RenderFirst();
     }
-    ClearOption();
-    //Lấy giá trị radio
-    var option = document.querySelectorAll('.checkbox');
-    for(let i=0;i<option.length;i++)
+    function getOptionPrice()
     {
+        
+        for(let i=0;i<option.length;i++)
+        {
         option[i].onclick = ()=>
         {
            valueRadio = parseInt(option[i].value);
         }
+        }
     }
+    function getOptionTypes()
+    {
+        
+        for(let i=0;i<option_product.length;i++)
+        {
+        option_product[i].onclick = ()=>
+        {
+            valueProduct = parseInt(option_product[i].value);
+        }
+        }
+    }
+    
+    
+    getOptionPrice();
+    getOptionTypes();

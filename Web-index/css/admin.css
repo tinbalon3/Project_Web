@@ -41,6 +41,9 @@
 {
     color: #fff;
 }
+::-webkit-scrollbar {
+    width: 10px;
+  }
 .item
 {
     padding: 15px 25px 15px 30px;
