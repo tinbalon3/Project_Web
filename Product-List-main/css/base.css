@@ -46,12 +46,16 @@ p {
 .cols-footer{
     width: 66.66666667%;
 }
+a:hover
+{
+    text-decoration: none !important;
+    color: #fff !important;
+}
 .clear{
     clear: both;
 }
 .grid-container{
     display: grid;
-    align-content: center;
     grid-template-columns: 24% 24% 24%;
 }
 .grid-container-footer-insta

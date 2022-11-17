@@ -279,10 +279,20 @@
     margin: 0 0 85px 0;
     text-transform: uppercase;
 }
-
+.no-find
+{
+    text-align: center;
+}
 /*BODY: SIDE BAR*/
 .widget{
-    margin-top: 50px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.widget-filter
+{
+    display: flex;
+    margin-top: 20px;
 }
 .widget-title{
     font: 400 25px/27px "Marcellus", Helvetica, sans-serif;
@@ -294,6 +304,8 @@
 }
 .widget-price-amount{
     padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 .price-label{
     padding: 10px 0;
@@ -303,12 +315,29 @@
     letter-spacing: 0.2px;
     color: rgba(0, 0, 0, 0.5);
 }
+
+.clear
+{
+    font-size: 15px;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #be9c79;
+    border: 1px solid #be9c79;
+    width: 111px;
+}
+
+
 .price-filter{
     padding: 15px 30px;
     background-color: #be9c79;
     border: 1px solid #be9c79;
     width: 111px;
 }
+.price-filter-link
+{
+    margin-right: 40px;
+}
+.clear-option,
 .price-filter-text{
     color: var(--white-color);
     text-transform: uppercase;
@@ -358,6 +387,11 @@
 {
     cursor: pointer;
 }
+input[type='text']
+{
+    padding: 10px;
+    width: 310px;
+}
 .top-rated-product-item-img{
     width: 110px;
    object-fit: contain;
@@ -402,7 +436,10 @@
     display: inline-block;
     padding: 0 10px;
 }
-
+#main
+{
+    position: relative;
+}
 /*DETAIL BODY: PRODUCT*/
 .body__product-main-img{
     width: 95%;
@@ -488,6 +525,7 @@
     border-right:0;
     padding:0;
 }
+
 .input-qty::-webkit-outer-spin-button,.input-qty::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin:0;
@@ -961,6 +999,23 @@
     font-size: 26px;
     right: 30%;
 }
+.login.header__navbar-list-item:nth-child(8):hover:after
+        {
+            display: block;
+        }
+        .login.header__navbar-list-item:nth-child(8):after
+        {
+        position: absolute;
+        content: "";
+        width: 47px;
+        height: 3px;
+        right: 12px;
+        border-radius: 2px;
+        top: 68%;
+        background-color: var(--white-color);
+        display: none;
+        animation: fadeIn1 ease-in-out 400ms;
+        }
 .footer__instagram-img-container:hover .img-modal{
     transition: all ease-in-out 0.4s;
     display: flex;
@@ -1032,7 +1087,7 @@
 
 .widget-tool-bar{
     -webkit-appearance: none;
-    width: 360px;
+    width: 300px;
     height: 25px;
     background: #BE9C79;
     outline: none;
@@ -1071,4 +1126,15 @@
 {
     opacity: 0.8;
     cursor: pointer;
+}
+
+.squaredcheck{
+    width: 200px;
+    position: relative;
+    margin: 10px 0px;
+}
+.squaredcheck-price{
+    font: 400 19px/21px "Cairo", Helvetica, sans-serif;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.5);
 }

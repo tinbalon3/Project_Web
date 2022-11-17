@@ -30,6 +30,16 @@
 .sidebar_list-item
 {
     list-style: none;
+    font-size: 1.6rem;
+    
+}
+.sidebar_list-item:hover
+{
+    background-color: #939191;
+}
+.sidebar_list-item:hover span
+{
+    color: #fff;
 }
 .item
 {
@@ -45,9 +55,8 @@
 }
 .sidebar_list-item span
 {
-    font-size: 1.6rem;
-    color: #676b84;
     margin-left: 20px;
+    color: #676b84;
 }
 /* Main content */
 .main-content
